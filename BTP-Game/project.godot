@@ -8,14 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://Scripts/Bullet.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Turret",
+"language": "GDScript",
+"path": "res://Scripts/Turret.gd"
+} ]
 _global_script_class_icons={
-
+"Bullet": "",
+"Turret": ""
 }
 
 [application]
 
 config/name="BTP-Game"
+run/main_scene="res://Scenes/MainScene.tscn"
 config/icon="res://icon.png"
 
 [autoload]

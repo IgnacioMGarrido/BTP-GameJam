@@ -1,4 +1,4 @@
 extends Node
 
-var bullet_res : String = "res://Scenes/Planets/Defenses/Bullet.tscn"
+const bullet_res : String = "res://Scenes/Planets/Defenses/Bullet.tscn"
 
