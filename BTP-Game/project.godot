@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="BTP-Game"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 window/size/width=320
