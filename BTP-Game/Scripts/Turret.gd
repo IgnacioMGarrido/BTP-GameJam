@@ -2,9 +2,10 @@ extends StaticBody2D
 
 class_name Turret
 
+var is_active = true
 onready var pivot : Position2D = $TurretPivot
 onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectilSpawn
-var Bullet = preload("res://Scenes/Planets/Defenses/Bullet.tscn")
+var Bullet = load(Global.bullet_res)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,11 +17,12 @@ func _process(delta):
 	
 
 func update_motion(delta):
-	pivot.look_at(get_global_mouse_position())
-	if Input.is_action_just_pressed("ui_accept"):
+	
+	if is_active:
+		pivot.look_at(get_global_mouse_position())
+		if Input.is_action_just_pressed("ui_accept"):
+			shoot_projectile()
 
-		shoot_projectile()
-		
 
 func shoot_projectile():
 	var b = Bullet.instance()

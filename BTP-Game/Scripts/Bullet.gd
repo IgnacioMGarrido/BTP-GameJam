@@ -2,11 +2,10 @@ extends KinematicBody2D
 
 class_name Bullet
 
-var speed = 75
+var speed : float = 75
 var velocity : Vector2
 
 func start(pos, dir):
-	print('spawned')
 	rotation = dir
 	position = pos
 	velocity = Vector2(speed, 0).rotated(rotation)

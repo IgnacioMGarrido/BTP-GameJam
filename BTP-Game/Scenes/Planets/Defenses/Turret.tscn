@@ -7,6 +7,7 @@
 extents = Vector2( 30.3567, 25.825 )
 
 [node name="Turret" type="StaticBody2D"]
+scale = Vector2( 0.192268, 0.192268 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -19,6 +20,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="TurretPivot" type="Position2D" parent="."]
+editor/display_folded = true
 position = Vector2( 31, 0 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot"]

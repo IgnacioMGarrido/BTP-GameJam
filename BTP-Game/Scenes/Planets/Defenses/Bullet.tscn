@@ -8,7 +8,11 @@ radius = 3.29523
 height = 4.65788
 
 [node name="Bullet" type="KinematicBody2D"]
+scale = Vector2( 0.243801, 0.243801 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.172824, 0.172824 )
