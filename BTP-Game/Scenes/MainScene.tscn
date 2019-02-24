@@ -6,8 +6,8 @@
 [node name="MainScene" type="Node2D"]
 
 [node name="Planet" parent="." instance=ExtResource( 1 )]
-position = Vector2( 153.79, 82.8103 )
+position = Vector2( 160, 90 )
 
 [node name="Turret" parent="." instance=ExtResource( 2 )]
-position = Vector2( 48.3956, 71.6972 )
+position = Vector2( 60, 82.3126 )
 
