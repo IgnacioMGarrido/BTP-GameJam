@@ -17,8 +17,8 @@ scale = Vector2( 1.01423, 1.02221 )
 curve = SubResource( 1 )
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
-position = Vector2( -22.8954, -10.5682 )
-rotation = 0.00271394
+position = Vector2( -190.075, -111.795 )
+rotation = 0.00837652
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
