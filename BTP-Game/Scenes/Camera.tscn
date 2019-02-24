@@ -1,6 +1,10 @@
 [gd_scene format=2]
 
-[node name="Camera" type="Camera2D"]
+[ext_resource path="res://Scripts/CameraController.gd" type="Script" id=1]
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="Camera" type="Camera2D"]
+smoothing_enabled = true
+script = ExtResource( 1 )
+
+[node name="ZoomTween" type="Tween" parent="."]
 
