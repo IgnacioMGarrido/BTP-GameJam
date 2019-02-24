@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 class_name Bullet
 
-const G = 200000
+const G = 300000
 var center : Vector2
 
 var speed : float = 60
@@ -29,6 +29,8 @@ func _physics_process(delta):
 	velocity += acceleration(center, self.position) * delta
 	var collision = move_and_collide(velocity * delta)
 	
+	if collision:
+		queue_free()
 	
 #	if collision:
 #		velocity = velocity.bounce(collision.normal)
