@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Planets/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Planets/Defenses/Turret.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Planets/Defenses/Bullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemies/Mob.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Managers/MobSpawner.tscn" type="PackedScene" id=6]
 
 [node name="MainScene" type="Node2D"]
 
@@ -19,4 +21,9 @@ position = Vector2( 85.3196, 43.7353 )
 [node name="Camera" parent="." instance=ExtResource( 4 )]
 position = Vector2( 160, 90 )
 current = true
+
+[node name="Mob" parent="." instance=ExtResource( 5 )]
+position = Vector2( 20.9003, 21.515 )
+
+[node name="MobSpawner" parent="." instance=ExtResource( 6 )]
 

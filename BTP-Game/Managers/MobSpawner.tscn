@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/MobSpawner.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Enemies/Mob.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -22.8954, -10.5682, 0, 0, 0, 0, 328.593, -9.61404, 0, 0, 0, 0, 329.074, 189.805, 0, 0, 0, 0, -22.8954, 188.85, 0, 0, 0, 0, -22.8954, -10.5682 )
+}
+
+[node name="MobSpawner" type="Node2D"]
+script = ExtResource( 1 )
+Mob = ExtResource( 2 )
+
+[node name="MobPath" type="Path2D" parent="."]
+scale = Vector2( 1.01423, 1.02221 )
+curve = SubResource( 1 )
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2( 45.8643, 19.9649 )
+rotation = 0.0215239
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
