@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Planets/Planet.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Planets/Defenses/Turret.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Planets/Defenses/Bullet.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Managers/DefenseManager.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=4]
 
 [node name="MainScene" type="Node2D"]
 
@@ -16,5 +16,7 @@ position = Vector2( 60, 82.3126 )
 [node name="Bullet" parent="." instance=ExtResource( 3 )]
 position = Vector2( 85.3196, 43.7353 )
 
-[node name="DefenseManager" parent="." instance=ExtResource( 4 )]
+[node name="Camera" parent="." instance=ExtResource( 4 )]
+position = Vector2( 160, 90 )
+current = true
 
