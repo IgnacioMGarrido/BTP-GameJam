@@ -8,11 +8,7 @@ onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectileSpawn
 var Bullet = load(Global.bullet_res)
 
 func _ready():
-	add_to_group("defenses")
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	update_motion(delta)
+	pass
 
 
 func update_motion(delta):
