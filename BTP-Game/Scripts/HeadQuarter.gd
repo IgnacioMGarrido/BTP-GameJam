@@ -2,7 +2,7 @@ extends Area2D
 
 signal create_worker
 
-onready var minion_parent = get_child(3)
+onready var minion_parent = get_child(2)
 var Minion = load(Global.minion_res)
 
 

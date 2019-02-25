@@ -30,10 +30,6 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadQuarter"]
 shape = SubResource( 1 )
 
-[node name="Timer" type="Timer" parent="HeadQuarter"]
-wait_time = 3.0
-autostart = true
-
 [node name="HQMinions" type="Node2D" parent="HeadQuarter"]
 editor/display_folded = true
 
@@ -63,4 +59,3 @@ texture = ExtResource( 3 )
 shape = SubResource( 2 )
 
 [connection signal="input_event" from="HeadQuarter" to="HeadQuarter" method="_on_HeadQuarter_input_event"]
-[connection signal="timeout" from="HeadQuarter/Timer" to="HeadQuarter" method="_on_Timer_timeout"]
