@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/MainPlanet.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/DefenseSpots.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Planets/Defenses/DefenseSpot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Planets/Defenses/Turret.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/ResourceManagement.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 65.0
@@ -17,12 +18,14 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="DefenseSpots" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 2 )
 
 [node name="DefenseSpot1" parent="DefenseSpots" instance=ExtResource( 3 )]
 position = Vector2( 0, -70.5 )
 
 [node name="DefenseSpot2" parent="DefenseSpots" instance=ExtResource( 3 )]
+editor/display_folded = true
 position = Vector2( 49.5, -49.5 )
 rotation = 0.785398
 
@@ -38,6 +41,7 @@ position = Vector2( 49.5, 49.5 )
 rotation = 2.35619
 
 [node name="DefenseSpot5" parent="DefenseSpots" instance=ExtResource( 3 )]
+editor/display_folded = true
 position = Vector2( 0, 70.5 )
 rotation = 3.14159
 
@@ -58,4 +62,6 @@ rotation = -1.5708
 [node name="DefenseSpot8" parent="DefenseSpots" instance=ExtResource( 3 )]
 position = Vector2( -49.5, -49.5 )
 rotation = 5.49779
+
+[node name="ResourceManagement" parent="." instance=ExtResource( 5 )]
 

@@ -13,7 +13,6 @@ script = ExtResource( 1 )
 Mob = ExtResource( 2 )
 
 [node name="MobPath" type="Path2D" parent="."]
-scale = Vector2( 1.01423, 1.02221 )
 curve = SubResource( 1 )
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]

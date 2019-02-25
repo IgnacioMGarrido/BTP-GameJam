@@ -10,7 +10,6 @@ func _ready():
 		def.connect("triggered_defense", self, "_on_triggered_defense")
 		def.connect("built_defense", self, "_on_built_defense")
 
-
 func _process(delta):
 	if active_defense:
 		for defense_child in active_defense.get_children():

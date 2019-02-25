@@ -5,7 +5,7 @@ class_name Bullet
 const G = 300000
 var center : Vector2
 
-var speed : float = 60
+var speed : float = 80
 var velocity : Vector2
 
 func _ready():
@@ -29,6 +29,8 @@ func acceleration(pos1 : Vector2, pos2 : Vector2):
 func _physics_process(delta):
 	velocity += acceleration(center, self.position) * delta
 	var collision = move_and_collide(velocity * delta)
+	if collision:
+		on_hit()
 
 	
 func on_hit():

@@ -7,10 +7,9 @@ onready var destination = get_node("/root/MainScene/Planet").global_position
 
 var direction : Vector2
 var velocity : Vector2
-var speed = 75
+var speed = 50
 
 
-	
 func _physics_process(delta):
 
 	direction = (destination - global_position).normalized()
@@ -20,11 +19,10 @@ func _physics_process(delta):
 	if collision:
 		if collision.collider.has_method("on_hit"):
 			collision.collider.on_hit()
-			hit()
-		queue_free()
+		hit()
+		
 		
 	
 func hit():
 	queue_free()
-func on_mob_hit():
-	queue_free()
+
