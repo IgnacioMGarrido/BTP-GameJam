@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Managers/ResourceManager.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/minions/minion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/minions/minion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/HeadQuarter.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.82513, 6.04063 )
@@ -13,20 +14,32 @@ extents = Vector2( 6.7247, 6.68319 )
 [node name="ResourceManagement" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="minion" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9.76689, -0.12851 )
+
+[node name="minion2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 20.5889, -0.12851 )
+
 [node name="HeadQuarter" type="Area2D" parent="."]
 editor/display_folded = true
 collision_mask = 2
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="HQSprite" type="Sprite" parent="HeadQuarter"]
+visible = false
 self_modulate = Color( 0.12549, 0.682353, 0.811765, 1 )
 scale = Vector2( 0.232404, 0.232404 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadQuarter"]
 shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="HeadQuarter"]
+wait_time = 3.0
+autostart = true
 
 [node name="Mine" type="Area2D" parent="."]
 editor/display_folded = true
@@ -37,16 +50,16 @@ __meta__ = {
 }
 
 [node name="MineSprite" type="Sprite" parent="Mine"]
+visible = false
 self_modulate = Color( 0.737255, 0.380392, 0.0627451, 1 )
 scale = Vector2( 0.246815, 0.246815 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mine"]
 shape = SubResource( 2 )
 
-[node name="minion" parent="." instance=ExtResource( 3 )]
-position = Vector2( 9.76689, -0.12851 )
-
-[connection signal="body_shape_entered" from="HeadQuarter" to="minion" method="_on_HeadQuarter_body_shape_entered"]
-[connection signal="body_shape_entered" from="Mine" to="minion" method="_on_Mine_body_shape_entered"]
 [connection signal="mineral_delivered" from="minion" to="." method="_on_minion_mineral_delivered"]
+[connection signal="mineral_delivered" from="minion2" to="." method="_on_minion_mineral_delivered"]
+[connection signal="body_shape_entered" from="HeadQuarter" to="minion" method="_on_HeadQuarter_body_shape_entered"]
+[connection signal="timeout" from="HeadQuarter/Timer" to="HeadQuarter" method="_on_Timer_timeout"]
+[connection signal="body_shape_entered" from="Mine" to="minion" method="_on_Mine_body_shape_entered"]

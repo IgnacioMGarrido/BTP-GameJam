@@ -18,8 +18,6 @@ var mineral_value = 10
 func _ready():
 	mineral_sprite.visible = false
 	destination = mine
-	print(head_quarter)
-	print(mine)
 
 func _physics_process(delta):
 	direction = (destination - global_position).normalized()
@@ -28,14 +26,16 @@ func _physics_process(delta):
 #	pass
 
 func _on_Mine_body_shape_entered(body_id, body, body_shape, area_shape):
-	print('Mine Entered')
-	destination = head_quarter
-	mineral_sprite.visible = true
-
+	if body == self:
+		print("Mine")
+		destination = head_quarter
+		print(destination)
+		mineral_sprite.visible = true
 
 
 func _on_HeadQuarter_body_shape_entered(body_id, body, body_shape, area_shape):
-	print('HQ Entered')
-	destination = mine
-	emit_signal("mineral_delivered",mineral_value)
-	mineral_sprite.visible = false
+	if body == self:
+		destination = mine
+		print(destination)
+		emit_signal("mineral_delivered",mineral_value)
+		mineral_sprite.visible = false
