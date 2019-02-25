@@ -8,6 +8,7 @@ extents = Vector2( 8.05204, 8.28355 )
 
 [node name="Turret" type="StaticBody2D"]
 editor/display_folded = true
+rotation = 4.71239
 scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 1 )
 

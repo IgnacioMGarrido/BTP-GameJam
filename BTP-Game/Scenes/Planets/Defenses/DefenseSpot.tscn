@@ -3,8 +3,8 @@
 [ext_resource path="res://Scripts/DefenseTrigger.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/DefenseStrap.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29, 30 )
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 28, 0, 28, -20, -28, -20, -28, 0, -20, 20, 20, 20 )
 
 [node name="DefenseSpot" type="Area2D"]
 script = ExtResource( 1 )
