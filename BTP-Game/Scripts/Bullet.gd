@@ -25,17 +25,17 @@ func acceleration(pos1 : Vector2, pos2 : Vector2):
 	return Vector2(normal_dir.x * (G / pow(length,2)), normal_dir.y * (G / pow(length,2)))
 
 
-
 func _physics_process(delta):
 	velocity += acceleration(center, self.position) * delta
 	var collision = move_and_collide(velocity * delta)
 	if collision:
+		if collision.collider.has_method("on_hit"):
+			collision.collider.on_hit()
 		on_hit()
 
-	
 func on_hit():
 	queue_free()
-	
+
 func _on_VisibilityNotifier2D_screen_exited():
     queue_free()
 

@@ -11,7 +11,6 @@ var speed = 50
 
 
 func _physics_process(delta):
-
 	direction = (destination - global_position).normalized()
 	velocity = Vector2(speed, speed) * direction
 
@@ -19,10 +18,9 @@ func _physics_process(delta):
 	if collision:
 		if collision.collider.has_method("on_hit"):
 			collision.collider.on_hit()
-		hit()
-		
-		
-	
-func hit():
+		on_hit()
+
+
+func on_hit():
 	queue_free()
 
