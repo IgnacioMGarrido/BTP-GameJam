@@ -10,6 +10,7 @@
 radius = 65.0
 
 [node name="Planet" type="KinematicBody2D"]
+position = Vector2( 0.115982, 0 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Managers/ResourceManager.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/ResourceManager.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/HeadQuarter.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/minions/minion.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.27736, 3.36559 )
@@ -33,7 +34,20 @@ shape = SubResource( 1 )
 wait_time = 3.0
 autostart = true
 
+[node name="HQMinions" type="Node2D" parent="HeadQuarter"]
+editor/display_folded = true
+
+[node name="Minion" parent="HeadQuarter/HQMinions" instance=ExtResource( 4 )]
+position = Vector2( 3.05132, -8.70523 )
+
+[node name="Minion2" parent="HeadQuarter/HQMinions" instance=ExtResource( 4 )]
+position = Vector2( 9.96165, -0.0897443 )
+
+[node name="Minion3" parent="HeadQuarter/HQMinions" instance=ExtResource( 4 )]
+position = Vector2( 4.03851, 9.06421 )
+
 [node name="Mine" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 47.8213, -14.1219 )
 collision_mask = 2
 __meta__ = {
@@ -48,4 +62,5 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mine"]
 shape = SubResource( 2 )
 
+[connection signal="input_event" from="HeadQuarter" to="HeadQuarter" method="_on_HeadQuarter_input_event"]
 [connection signal="timeout" from="HeadQuarter/Timer" to="HeadQuarter" method="_on_Timer_timeout"]

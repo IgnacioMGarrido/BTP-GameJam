@@ -7,9 +7,6 @@ onready var pivot : Position2D = $TurretPivot
 onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectileSpawn
 var Bullet = load(Global.bullet_res)
 
-func _ready():
-	pass
-
 
 func update_motion(delta):
 	if active:

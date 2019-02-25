@@ -7,7 +7,9 @@
 radius = 1.95816
 height = 1.54699
 
-[node name="Minion" type="KinematicBody2D"]
+[node name="Minion" type="KinematicBody2D" groups=[
+"minions",
+]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource( 1 )
