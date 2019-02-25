@@ -7,7 +7,7 @@ func _ready():
 	defenses = get_tree().get_nodes_in_group("defenses")
 	for def in defenses:
 		def.connect("trigger_defense", self, "_on_trigger_defense")
-
+	
 
 func _process(delta):
 	if active_defense:
