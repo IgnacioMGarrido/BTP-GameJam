@@ -5,15 +5,16 @@
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.82513, 6.04063 )
+extents = Vector2( 3.27736, 3.36559 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 6.7247, 6.68319 )
+extents = Vector2( 4.07492, 3.75113 )
 
 [node name="ResourceManagement" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="HeadQuarter" type="Area2D" parent="."]
+position = Vector2( 9.27523, -3.09174 )
 collision_mask = 2
 script = ExtResource( 2 )
 __meta__ = {
@@ -21,9 +22,8 @@ __meta__ = {
 }
 
 [node name="HQSprite" type="Sprite" parent="HeadQuarter"]
-visible = false
 self_modulate = Color( 0.12549, 0.682353, 0.811765, 1 )
-scale = Vector2( 0.232404, 0.232404 )
+scale = Vector2( 0.122993, 0.122993 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadQuarter"]
@@ -34,17 +34,15 @@ wait_time = 3.0
 autostart = true
 
 [node name="Mine" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 41.6378, 0.385536 )
+position = Vector2( 47.8213, -14.1219 )
 collision_mask = 2
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="MineSprite" type="Sprite" parent="Mine"]
-visible = false
 self_modulate = Color( 0.737255, 0.380392, 0.0627451, 1 )
-scale = Vector2( 0.246815, 0.246815 )
+scale = Vector2( 0.139, 0.139 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mine"]

@@ -4,8 +4,9 @@ class_name Minion
 
 signal mineral_delivered 
 
+onready var ResourceManagement = get_parent().get_parent()
 onready var head_quarter = get_parent()#get_node("/root/MainScene/Planet/ResourceManagement/HeadQuarter") 
-onready var mine = get_parent().get_parent().get_child(1)#get_node("/root/MainScene/Planet/ResourceManagement/Mine")
+onready var mine = ResourceManagement.get_child(1)#get_node("/root/MainScene/Planet/ResourceManagement/Mine")
 onready var mineral_sprite = $Sprite/mineral_sprite
 
 
@@ -15,7 +16,9 @@ var destination : Vector2
 var speed = 10
 
 var mineral_value = 10
+var has_mineral = false
 func _ready():
+	connect("mineral_delivered", ResourceManagement, "_on_minion_mineral_delivered")
 	head_quarter.connect("body_shape_entered", self, "_on_HeadQuarter_body_shape_entered")
 	mine.connect("body_shape_entered", self, "_on_Mine_body_shape_entered")
 	mineral_sprite.visible = false
@@ -25,16 +28,19 @@ func _physics_process(delta):
 	direction = (destination - global_position).normalized()
 	velocity = Vector2(speed, speed) * direction
 	var collision = move_and_collide(velocity * delta)
-#	pass
+
 
 func _on_Mine_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body == self:
 		destination = head_quarter.global_position
+		has_mineral = true
 		mineral_sprite.visible = true
 
 
 func _on_HeadQuarter_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body == self:
 		destination = mine.global_position
-		emit_signal("mineral_delivered",mineral_value)
-		mineral_sprite.visible = false
+		if has_mineral:
+			emit_signal("mineral_delivered",mineral_value)
+			has_mineral = false
+			mineral_sprite.visible = false
