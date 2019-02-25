@@ -11,6 +11,7 @@ var velocity : Vector2
 func _ready():
 	center = get_node("/root/MainScene/Planet").global_position
 
+
 func start(pos, dir):
 	rotation = dir
 	position = pos
@@ -28,15 +29,13 @@ func acceleration(pos1 : Vector2, pos2 : Vector2):
 func _physics_process(delta):
 	velocity += acceleration(center, self.position) * delta
 	var collision = move_and_collide(velocity * delta)
-	
-	if collision:
-		queue_free()
-	
-#	if collision:
-#		velocity = velocity.bounce(collision.normal)
-#		if collision.collider.has_method("hit"):
-#			collision.collider.hit()
 
+	
+func on_hit():
+	queue_free()
 	
 func _on_VisibilityNotifier2D_screen_exited():
     queue_free()
+
+func _on_Timer_timeout():
+	queue_free()
