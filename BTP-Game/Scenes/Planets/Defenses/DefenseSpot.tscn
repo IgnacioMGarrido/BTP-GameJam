@@ -7,6 +7,7 @@
 points = PoolVector2Array( 28, 0, 28, -20, -28, -20, -28, 0, -20, 20, 20, 20 )
 
 [node name="DefenseSpot" type="Area2D"]
+collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

@@ -9,6 +9,7 @@ height = 4.65788
 
 [node name="Bullet" type="KinematicBody2D"]
 scale = Vector2( 0.243801, 0.243801 )
+collision_layer = 4
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true

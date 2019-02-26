@@ -63,6 +63,12 @@ zoom={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="General"
+2d_physics/layer_2="Resources"
+2d_physics/layer_3="Projectiles"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
