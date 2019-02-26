@@ -20,7 +20,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="TurretPivot" type="Position2D" parent="."]
-position = Vector2( 11.91, 0 )
+position = Vector2( 12, 0 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot"]
 position = Vector2( 7.82, 0 )
@@ -30,4 +30,7 @@ texture = ExtResource( 2 )
 [node name="ProjectileSpawn" type="Position2D" parent="TurretPivot/Sprite"]
 position = Vector2( 32.1462, 0 )
 scale = Vector2( 2, 3.42857 )
+
+[node name="DummyPivot" type="Position2D" parent="."]
+position = Vector2( 12, 0 )
 
