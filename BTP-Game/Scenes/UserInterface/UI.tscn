@@ -8,18 +8,18 @@ anchor_bottom = 1.0
 mouse_filter = 2
 script = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="MineralsColorRect" type="ColorRect" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -40.0
 margin_bottom = 20.0
 color = Color( 0, 0, 0, 0.396078 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MineralsColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="current_minerals" type="Label" parent="ColorRect/HBoxContainer"]
+[node name="current_minerals" type="Label" parent="MineralsColorRect/HBoxContainer"]
 margin_top = 3.0
 margin_right = 8.0
 margin_bottom = 17.0
