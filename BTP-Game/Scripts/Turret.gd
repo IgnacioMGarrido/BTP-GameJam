@@ -2,6 +2,9 @@ extends StaticBody2D
 
 class_name Turret
 
+
+var turret_cost = 100
+
 var active = true
 onready var pivot : Position2D = $TurretPivot
 onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectileSpawn
