@@ -2,7 +2,7 @@ extends Control
 
 onready var res_manager = get_node(Global.ResourceManager_path)
 
-onready var minerals_label = $"HBoxContainer/current_minerals"
+onready var minerals_label = $"ColorRect/HBoxContainer/current_minerals"
 
 func _ready():
 	minerals_label.text = "0"

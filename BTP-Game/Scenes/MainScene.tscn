@@ -1,27 +1,25 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/Planets/Planet.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Managers/MobSpawner.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Managers/DefenseManager.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/UserInterface/UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UserInterface/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Planets/Planet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Managers/MobSpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Managers/DefenseManager.tscn" type="PackedScene" id=5]
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Planet" parent="." instance=ExtResource( 1 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 1 )]
+
+[node name="Planet" parent="." instance=ExtResource( 2 )]
 position = Vector2( 160, 90 )
 
-[node name="Camera" parent="." instance=ExtResource( 2 )]
+[node name="Camera" parent="." instance=ExtResource( 3 )]
 position = Vector2( 160, 90 )
 current = true
 
-[node name="MobSpawner" parent="." instance=ExtResource( 3 )]
+[node name="MobSpawner" parent="." instance=ExtResource( 4 )]
 
-[node name="DefenseManager" parent="." instance=ExtResource( 4 )]
-
-[node name="UI" parent="." instance=ExtResource( 5 )]
-margin_left = 323.159
-margin_top = 11.579
-margin_right = 323.159
-margin_bottom = 11.579
+[node name="DefenseManager" parent="." instance=ExtResource( 5 )]
 

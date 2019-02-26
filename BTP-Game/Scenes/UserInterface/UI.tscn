@@ -5,20 +5,24 @@
 [node name="UI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 1 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -52.4726
-margin_top = -18.4804
-margin_right = 39.5274
-margin_bottom = 45.5196
+margin_left = -40.0
+margin_bottom = 20.0
+color = Color( 0, 0, 0, 0.396078 )
 
-[node name="current_minerals" type="Label" parent="HBoxContainer"]
-margin_top = 25.0
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="current_minerals" type="Label" parent="ColorRect/HBoxContainer"]
+margin_top = 3.0
 margin_right = 8.0
-margin_bottom = 39.0
+margin_bottom = 17.0
 text = "0"
 align = 1
 valign = 1
