@@ -1,5 +1,7 @@
 extends Node2D
 
+signal minerals_updated
+
 class_name ResourceManager
 
 var current_minerals = 0 
@@ -7,8 +9,10 @@ var current_minerals = 0
 	
 func _on_minion_mineral_delivered(var mineral_value):
 	current_minerals += mineral_value
+	emit_signal("minerals_updated", current_minerals)
 	#print(current_minerals)
 
 func _substract_minerals(var value):
 	current_minerals -= value
-	print(current_minerals)
+	emit_signal("minerals_updated", current_minerals)
+	#print(current_minerals)
