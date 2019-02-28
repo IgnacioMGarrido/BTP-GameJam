@@ -22,7 +22,6 @@ texture = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="TurretPivot" type="Position2D" parent="."]
-editor/display_folded = true
 position = Vector2( 12, 0 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot"]

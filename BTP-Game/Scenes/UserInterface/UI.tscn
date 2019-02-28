@@ -19,6 +19,7 @@ size = 12
 font_data = ExtResource( 3 )
 
 [node name="UI" type="MarginContainer"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 0.1
 mouse_filter = 2

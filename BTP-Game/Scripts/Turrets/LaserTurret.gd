@@ -8,6 +8,7 @@ onready var wait_timer = $"WaitTimer"
 onready var laser_timer = $"LaserTimer"
 
 func _ready():
+	self.pause_mode = Node.PAUSE_MODE_STOP
 	$AnimationPlayer.play("rotate_barrel")
 	_enable_objects(false)
 	wait_timer.start()

@@ -11,3 +11,6 @@ func _ready():
 func _on_minerals_updated(var new_minerals):
 	minerals_label.text = str(new_minerals)
 	
+func _input(event):
+	if event.is_action_pressed("pause"):
+		get_tree().paused = not get_tree().paused

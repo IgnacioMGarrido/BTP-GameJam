@@ -19,7 +19,7 @@ func _ready():
 func _process(delta):
 	if active_defense:
 		for defense_child in active_defense.get_children():
-			if "Turret" in defense_child.get_name():
+			if "Turret" in defense_child.get_name() && get_tree().paused == false:
 				defense_child.update_motion(delta)
 
 
@@ -28,11 +28,13 @@ func _on_triggered_defense(defense_spot):
 
 
 func _on_built_defense(defense_spot):
+	
 	var t = Turret.instance()
 	if res_manager.current_minerals >= t.turret_cost:
 		emit_signal("turret_bought", t.turret_cost)
 		var child_count = defense_spot.get_child_count()
 		if child_count < 5:
+			set_process(true)
 			match child_count:
 				3:
 					t.position.x += 17

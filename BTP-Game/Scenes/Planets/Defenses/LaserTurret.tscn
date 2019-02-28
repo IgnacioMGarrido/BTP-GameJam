@@ -24,12 +24,10 @@ tracks/0/keys = {
 
 [node name="LaserTurret" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+Bullet = null
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 0.909804, 0.196078, 0.196078, 1 )
-
-[node name="TurretPivot" parent="." index="2"]
-editor/display_folded = false
 
 [node name="Laser" type="Light2D" parent="TurretPivot/Sprite/ProjectileSpawn" index="0"]
 position = Vector2( 98, 0 )

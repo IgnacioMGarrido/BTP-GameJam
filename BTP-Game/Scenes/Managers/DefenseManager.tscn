@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Managers/DefenseManager.gd" type="Script" id=1]
 
-
 [node name="DefenseManager" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 1 )
 

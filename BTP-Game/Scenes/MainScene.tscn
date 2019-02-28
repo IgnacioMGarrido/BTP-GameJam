@@ -19,6 +19,7 @@
 position = Vector2( 160, 90 )
 
 [node name="Camera" parent="." instance=ExtResource( 4 )]
+pause_mode = 2
 position = Vector2( 160, 90 )
 current = true
 
