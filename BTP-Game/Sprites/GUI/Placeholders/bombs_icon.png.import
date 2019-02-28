@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/label_EP.png-ffc591e1d139e2badd1b32e2e37935cf.stex"
+path="res://.import/bombs_icon.png-ff7a61e4a282198627843fa26f9f946b.stex"
 
 [deps]
 
-source_file="res://Sprites/GUI/label_EP.png"
-dest_files=[ "res://.import/label_EP.png-ffc591e1d139e2badd1b32e2e37935cf.stex" ]
+source_file="res://Sprites/GUI/Placeholders/bombs_icon.png"
+dest_files=[ "res://.import/bombs_icon.png-ff7a61e4a282198627843fa26f9f946b.stex" ]
 
 [params]
 

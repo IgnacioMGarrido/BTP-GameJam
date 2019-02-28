@@ -65,6 +65,7 @@ window/stretch/aspect="keep"
 
 canvas=false
 control=false
+width=false
 
 [input]
 
