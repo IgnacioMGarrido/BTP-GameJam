@@ -35,7 +35,7 @@ func update_motion(delta):
 		else:
 			pivot.rotation = dummy_pivot.rotation
 		
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("shoot"):
 			shoot_projectile()
 
 

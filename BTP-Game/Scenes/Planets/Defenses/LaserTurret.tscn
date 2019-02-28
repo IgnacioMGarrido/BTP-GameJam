@@ -24,7 +24,6 @@ tracks/0/keys = {
 
 [node name="LaserTurret" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-turret_cost = 300
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 0.909804, 0.196078, 0.196078, 1 )

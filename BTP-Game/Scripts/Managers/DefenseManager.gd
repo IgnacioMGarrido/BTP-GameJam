@@ -41,3 +41,10 @@ func _on_built_defense(defense_spot):
 			defense_spot.add_child(t)
 		else:
 			t.queue_free()
+
+func _on_TurretCreationUI_basicTurretSelected():
+	Turret = load(Global.turret_res)
+
+
+func _on_TurretCreationUI_laserTurretSelected():
+	Turret = load(Global.laser_turret_res)
