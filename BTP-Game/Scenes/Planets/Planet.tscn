@@ -23,7 +23,6 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="DefenseSpots" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="DefenseSpot1" parent="DefenseSpots" instance=ExtResource( 4 )]

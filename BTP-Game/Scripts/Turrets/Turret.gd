@@ -3,14 +3,16 @@ extends StaticBody2D
 class_name Turret
 
 var PI_2 = PI/2
+export var hit_points = 3
 export var turret_cost = 100
 export (PackedScene) var Bullet
 
+
 var active = true
+
 onready var pivot : Position2D = $TurretPivot
 onready var dummy_pivot : Position2D = $DummyPivot
 onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectileSpawn
-
 
 
 func _ready():
@@ -40,7 +42,20 @@ func update_motion(delta):
 
 
 func shoot_projectile():
-	var b = Bullet.instance()
+	var b = Bullet.instance()	
 	b.start(bullet_spawn.global_position, bullet_spawn.global_rotation)
 	get_node("/root/MainScene").add_child(b)
+
+func on_hit():
+	hit_points -= 1
+	if hit_points <= 0:
+		kill()
+
+func kill():
+	queue_free()
+
+
+
+
+
 

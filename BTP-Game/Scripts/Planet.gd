@@ -17,6 +17,5 @@ func on_hit():
 		if get_tree().get_nodes_in_group('minions').size() > 0:
 			get_tree().get_nodes_in_group('minions').pop_front().kill()
 		damage_to_kill_minion = 0
-			
-	print('Planet hit')
+
 
