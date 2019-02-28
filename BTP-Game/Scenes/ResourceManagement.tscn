@@ -1,9 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/ResourceManager.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/HeadQuarter.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Managers/ResourceManager.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/ResourceManagement/HeadQuarter.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/minions/minion.tscn" type="PackedScene" id=4]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.27736, 3.36559 )
