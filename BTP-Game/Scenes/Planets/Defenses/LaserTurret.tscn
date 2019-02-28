@@ -26,9 +26,6 @@ tracks/0/keys = {
 script = ExtResource( 2 )
 Bullet = null
 
-[node name="Sprite" parent="." index="0"]
-modulate = Color( 0.909804, 0.196078, 0.196078, 1 )
-
 [node name="Laser" type="Light2D" parent="TurretPivot/Sprite/ProjectileSpawn" index="0"]
 position = Vector2( 98, 0 )
 texture = ExtResource( 3 )
@@ -37,15 +34,19 @@ color = Color( 1, 0, 0, 1 )
 energy = 100.0
 
 [node name="Sprite" type="Sprite" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="0"]
-position = Vector2( 18.2189, -0.000224442 )
-rotation = -2.27374e-013
+position = Vector2( 8.4411, -0.000190735 )
+rotation = -2.27374e-13
+scale = Vector2( 0.874726, 0.302382 )
 texture = ExtResource( 4 )
 
 [node name="RayCast2D" type="RayCast2D" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="1"]
-position = Vector2( -95, 1.45519e-011 )
+position = Vector2( -95, 1.45519e-11 )
 rotation = -1.5708
 enabled = true
 cast_to = Vector2( 0, 195 )
+
+[node name="Sprite" parent="." index="1"]
+modulate = Color( 0.909804, 0.196078, 0.196078, 1 )
 
 [node name="WaitTimer" type="Timer" parent="." index="4"]
 wait_time = 3.0

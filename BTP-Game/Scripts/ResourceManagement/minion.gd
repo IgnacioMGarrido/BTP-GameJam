@@ -9,6 +9,7 @@ onready var head_quarter = get_parent().get_parent()#get_node("/root/MainScene/P
 onready var mine = ResourceManagement.get_child(1)#get_node("/root/MainScene/Planet/ResourceManagement/Mine")
 onready var mineral_sprite = $Sprite/mineral_sprite
 
+export var mineral_cost = 20
 
 var direction : Vector2
 var velocity : Vector2
@@ -17,7 +18,11 @@ var speed = 10
 
 var mineral_value = 10
 var has_mineral = false
+
+
+
 func _ready():
+	add_to_group('minions')
 	print(get_parent().name)
 	connect("mineral_delivered", ResourceManagement, "_on_minion_mineral_delivered")
 	head_quarter.connect("body_shape_entered", self, "_on_HeadQuarter_body_shape_entered")
@@ -45,3 +50,6 @@ func _on_HeadQuarter_body_shape_entered(body_id, body, body_shape, area_shape):
 			emit_signal("mineral_delivered",mineral_value)
 			has_mineral = false
 			mineral_sprite.visible = false
+
+func kill():
+	queue_free()

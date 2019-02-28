@@ -3,7 +3,6 @@
 [ext_resource path="res://Scripts/ResourceManagement/minion.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 1.95816
 height = 1.54699

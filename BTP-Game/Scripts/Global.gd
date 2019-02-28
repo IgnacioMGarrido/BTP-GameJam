@@ -9,3 +9,4 @@ const laser_turret_res = "res://Scenes/Planets/Defenses/LaserTurret.tscn"
 
 #Nodes
 var ResourceManager_path = "/root/MainScene/Planet/ResourceManagement"
+
