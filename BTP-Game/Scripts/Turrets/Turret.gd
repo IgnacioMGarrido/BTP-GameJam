@@ -4,14 +4,19 @@ class_name Turret
 
 var PI_2 = PI/2
 export var turret_cost = 100
+export (PackedScene) var Bullet
 
 var active = true
 onready var pivot : Position2D = $TurretPivot
 onready var dummy_pivot : Position2D = $DummyPivot
 onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectileSpawn
-var Bullet = load(Global.bullet_res)
 
 
+
+func _ready():
+	if Bullet == null:
+		print("No bullet assigned. Assinging the basic one")
+		Bullet = load(Global.bullet_res)
 func update_motion(delta):
 	if active:
 		dummy_pivot.look_at(get_global_mouse_position())
