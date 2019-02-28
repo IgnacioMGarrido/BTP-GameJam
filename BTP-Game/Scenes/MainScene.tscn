@@ -9,6 +9,7 @@
 [node name="MainScene" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 1 )]
 

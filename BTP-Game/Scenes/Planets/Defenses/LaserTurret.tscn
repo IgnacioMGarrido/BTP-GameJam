@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Planets/Defenses/Turret.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/LaserTurret.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/DefenseStrap.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/GUI/Placeholders/energy_bar_fill.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotate_barrel"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TurretPivot:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -70.0, 0.0, 70.0, 0.0 ]
+}
+
+[node name="LaserTurret" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+turret_cost = 300
+
+[node name="Sprite" parent="." index="0"]
+modulate = Color( 0.909804, 0.196078, 0.196078, 1 )
+
+[node name="TurretPivot" parent="." index="2"]
+editor/display_folded = false
+
+[node name="Laser" type="Light2D" parent="TurretPivot/Sprite/ProjectileSpawn" index="0"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 3 )
+texture_scale = 3.4
+color = Color( 1, 0, 0, 1 )
+energy = 100.0
+
+[node name="Sprite" type="Sprite" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="0"]
+position = Vector2( 18.2189, -0.000224442 )
+rotation = -2.27374e-13
+scale = Vector2( 1, 1 )
+texture = ExtResource( 4 )
+
+[node name="RayCast2D" type="RayCast2D" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="1"]
+position = Vector2( -95, 1.45519e-11 )
+rotation = -1.5708
+scale = Vector2( 1, 1 )
+enabled = true
+cast_to = Vector2( 0, 195 )
+
+[node name="WaitTimer" type="Timer" parent="." index="4"]
+wait_time = 3.0
+
+[node name="LaserTimer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+anims/rotate_barrel = SubResource( 1 )
+
+[connection signal="timeout" from="WaitTimer" to="." method="_on_WaitTimer_timeout"]
+[connection signal="timeout" from="LaserTimer" to="." method="_on_LaserTimer_timeout"]

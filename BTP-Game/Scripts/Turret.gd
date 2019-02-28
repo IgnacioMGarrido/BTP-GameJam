@@ -3,7 +3,7 @@ extends StaticBody2D
 class_name Turret
 
 var PI_2 = PI/2
-var turret_cost = 100
+export var turret_cost = 100
 
 var active = true
 onready var pivot : Position2D = $TurretPivot
