@@ -3,8 +3,8 @@
 [ext_resource path="res://Scenes/UserInterface/UI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Planets/Planet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Managers/MobSpawner.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Managers/DefenseManager.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Managers/MobSpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Managers/DefenseManager.tscn" type="PackedScene" id=5]
 
 [node name="MainScene" type="Node2D"]
 
