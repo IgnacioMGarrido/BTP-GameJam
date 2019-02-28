@@ -1,38 +1,45 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Turrets/Turret.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Planets/Defenses/Bullet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/TurretBarrel.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/TurretBase.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/TurretLightText.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.05204, 8.28355 )
+extents = Vector2( 2, 3 )
 
 [node name="Turret" type="StaticBody2D"]
 rotation = 4.71239
-scale = Vector2( 0.4, 0.4 )
 collision_mask = 0
 script = ExtResource( 1 )
 Bullet = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.375875, 0.37587 )
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-
 [node name="TurretPivot" type="Position2D" parent="."]
-position = Vector2( 12, 0 )
+position = Vector2( 3, 0 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot"]
-position = Vector2( 7.82, 0 )
-scale = Vector2( 0.24, 0.07 )
+position = Vector2( 1.5, 9.53674e-007 )
+rotation = 1.5708
 texture = ExtResource( 3 )
 
 [node name="ProjectileSpawn" type="Position2D" parent="TurretPivot/Sprite"]
-position = Vector2( 32.1462, 0 )
-scale = Vector2( 2, 3.42857 )
+position = Vector2( 0, -2.5 )
+rotation = -1.5708
+
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
+texture = ExtResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="Sprite"]
+texture = ExtResource( 5 )
+offset = Vector2( 0, 1.5 )
+color = Color( 0, 0.741176, 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 0 )
+shape = SubResource( 1 )
 
 [node name="DummyPivot" type="Position2D" parent="."]
-position = Vector2( 12, 0 )
+position = Vector2( 3, 0 )
 

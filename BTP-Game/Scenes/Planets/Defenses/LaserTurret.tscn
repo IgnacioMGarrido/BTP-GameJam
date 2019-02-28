@@ -38,11 +38,11 @@ energy = 100.0
 
 [node name="Sprite" type="Sprite" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="0"]
 position = Vector2( 18.2189, -0.000224442 )
-rotation = -2.27374e-13
+rotation = -2.27374e-013
 texture = ExtResource( 4 )
 
 [node name="RayCast2D" type="RayCast2D" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="1"]
-position = Vector2( -95, 1.45519e-11 )
+position = Vector2( -95, 1.45519e-011 )
 rotation = -1.5708
 enabled = true
 cast_to = Vector2( 0, 195 )
