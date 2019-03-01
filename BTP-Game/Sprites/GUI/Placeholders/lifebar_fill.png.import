@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/lifebar_fill.png-85e9fcdc8c13772d1d0ae841deaf0f60.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

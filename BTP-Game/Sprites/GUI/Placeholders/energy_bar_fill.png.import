@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/energy_bar_fill.png-4f464330c06dc06878fb33a498bcafc9.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/label_HP_bg.png-7a45f89bc0dfff7d2dd478ffb9c88f23.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/TurretBarrel.png-1444ee5e1cdb8e5e1a424342bdbeab58.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

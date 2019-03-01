@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/QuadLaserTurretLightText.png-aa437b4a9ef7394e23b0a9badf881e88.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 

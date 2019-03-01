@@ -24,13 +24,12 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="DefenseSpots" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="DefenseSpot1" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 0, -70.5 )
 
-[node name="Turret" parent="DefenseSpots/DefenseSpot1" instance=ExtResource( 5 )]
+[node name="QuadLaserTurret" parent="DefenseSpots/DefenseSpot1" instance=ExtResource( 5 )]
 
 [node name="DefenseSpot2" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 49.5, -49.5 )
