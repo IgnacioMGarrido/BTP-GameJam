@@ -12,25 +12,25 @@ func _process(delta):
 		0:
 			mob_timer.wait_time = 15
 		2:
-			mob_timer.wait_time = 10
+			mob_timer.wait_time = 6
 		4:
-			mob_timer.wait_time = 5
+			mob_timer.wait_time = 4
 		6:
-			mob_timer.wait_time = 4
-		8:
-			mob_timer.wait_time = 4
-		10:
-			mob_timer.wait_time = 3
-		12:
-			mob_timer.wait_time = 3
-		14:
 			mob_timer.wait_time = 2
-		16:
+		8:
+			mob_timer.wait_time = 2
+		10:
 			mob_timer.wait_time = 1
-		18:
+		12:
 			mob_timer.wait_time = .5
+		14:
+			mob_timer.wait_time = .3
+		16:
+			mob_timer.wait_time = .3
+		18:
+			mob_timer.wait_time = .3
 		20:
-			mob_timer.wait_time = .4
+			mob_timer.wait_time = .3
 		22:
 			mob_timer.wait_time = .3
 		24:

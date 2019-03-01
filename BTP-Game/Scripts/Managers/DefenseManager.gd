@@ -34,7 +34,6 @@ func _on_built_defense(defense_spot):
 		print('childs: ' + str(child_count))
 		if child_count < 5:
 			match child_count:
-
 				3:
 					t.position.x += 17
 				4:
