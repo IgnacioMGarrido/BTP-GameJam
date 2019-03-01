@@ -20,7 +20,7 @@ position = Vector2( -190.075, -111.795 )
 rotation = 0.00837267
 
 [node name="MobTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 20.0
 autostart = true
 
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]

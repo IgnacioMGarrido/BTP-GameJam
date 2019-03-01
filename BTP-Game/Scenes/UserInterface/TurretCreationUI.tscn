@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/TurretCreationUI.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/GUI/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,10 @@
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
 font_data = ExtResource( 2 )
 
 [node name="TurretCreationUI" type="MarginContainer"]
@@ -25,7 +29,7 @@ margin_bottom = 25.0
 
 [node name="BasicTurretButton" type="Button" parent="HBoxContainer"]
 pause_mode = 2
-margin_right = 104.0
+margin_right = 101.0
 margin_bottom = 25.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -33,8 +37,8 @@ text = "Basic"
 icon = ExtResource( 3 )
 
 [node name="LaserTurretButton" type="Button" parent="HBoxContainer"]
-margin_left = 108.0
-margin_right = 212.0
+margin_left = 105.0
+margin_right = 206.0
 margin_bottom = 25.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
@@ -42,10 +46,11 @@ text = "Laser"
 icon = ExtResource( 3 )
 
 [node name="QuadLaserTurretButton" type="Button" parent="HBoxContainer"]
-margin_left = 216.0
-margin_right = 320.0
+margin_left = 210.0
+margin_right = 319.0
 margin_bottom = 25.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
 text = "Quad Laser"
 icon = ExtResource( 4 )
 

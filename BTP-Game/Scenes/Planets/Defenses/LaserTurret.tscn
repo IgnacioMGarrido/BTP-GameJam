@@ -27,8 +27,8 @@ script = ExtResource( 2 )
 Bullet = null
 
 [node name="Laser" type="Light2D" parent="TurretPivot/Sprite/ProjectileSpawn" index="0"]
-position = Vector2( 59.0836, 0.191681 )
-scale = Vector2( 0.60531, 0.560368 )
+position = Vector2( 31.3157, 0.0572472 )
+scale = Vector2( 0.313278, 0.486275 )
 texture = ExtResource( 3 )
 texture_scale = 3.4
 color = Color( 1, 0, 0, 1 )

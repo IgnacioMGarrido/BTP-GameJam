@@ -25,7 +25,4 @@ func _on_Planet_hit_points_updated(var hit_points):
 	hp_label.text = str(hit_points)
 	tween.interpolate_property(life_progress_bar, 'value', life_progress_bar.value, hit_points, DURATION, Tween.TRANS_QUAD, Tween.EASE_IN)
 	tween.start()
-	
-	#tween.interpolate_property(life_progress_bar, 'value', life_progress_bar.value, hit_points, 1f, Tween.TRANS_QUAD, Tween.EASE_IN)
 
-	#life_progress_bar.value = hit_points

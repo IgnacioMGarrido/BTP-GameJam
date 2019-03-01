@@ -1,13 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/MainPlanet.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/DefenseSpots.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Planets/Defenses/DefenseSpot.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Planets/Defenses/QuadLaserTurret.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Planets/Defenses/Turret.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Planets/Defenses/LaserTurret.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/ResourceManagement.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/ResourceManagement.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 65.0
@@ -29,19 +26,14 @@ script = ExtResource( 3 )
 [node name="DefenseSpot1" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 0, -70.5 )
 
-[node name="QuadLaserTurret" parent="DefenseSpots/DefenseSpot1" instance=ExtResource( 5 )]
-
 [node name="DefenseSpot2" parent="DefenseSpots" instance=ExtResource( 4 )]
 editor/display_folded = true
 position = Vector2( 49.5, -49.5 )
 rotation = 0.785398
 
 [node name="DefenseSpot3" parent="DefenseSpots" instance=ExtResource( 4 )]
-editor/display_folded = true
 position = Vector2( 70.5, 0 )
 rotation = 1.5708
-
-[node name="Turret" parent="DefenseSpots/DefenseSpot3/Spot3" index="0" instance=ExtResource( 6 )]
 
 [node name="DefenseSpot4" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 49.5, 49.5 )
@@ -56,10 +48,6 @@ editor/display_folded = true
 position = Vector2( -49.5, 49.5 )
 rotation = 3.92699
 
-[node name="LaserTurret" parent="DefenseSpots/DefenseSpot6/Spot1" index="0" instance=ExtResource( 7 )]
-
-[node name="LaserTurret" parent="DefenseSpots/DefenseSpot6/Spot3" index="0" instance=ExtResource( 7 )]
-
 [node name="DefenseSpot7" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( -70.5, 0 )
 rotation = 4.71239
@@ -69,13 +57,5 @@ editor/display_folded = true
 position = Vector2( -49.5, -49.5 )
 rotation = 5.49779
 
-[node name="Turret" parent="DefenseSpots/DefenseSpot8/Spot1" index="0" instance=ExtResource( 6 )]
+[node name="ResourceManagement" parent="." instance=ExtResource( 5 )]
 
-[node name="ResourceManagement" parent="." instance=ExtResource( 8 )]
-
-
-[editable path="DefenseSpots/DefenseSpot3"]
-
-[editable path="DefenseSpots/DefenseSpot6"]
-
-[editable path="DefenseSpots/DefenseSpot8"]

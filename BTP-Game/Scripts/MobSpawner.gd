@@ -4,13 +4,14 @@ export (PackedScene) var Mob
 onready var mob_timer : Timer = $"MobTimer"
 
 func _ready():
+	mob_timer.wait_time = 10000
 	randomize()
 
 func _process(delta):
 	#Fixme: if it starts getting heavy on memory or we want to keep developing the game move this to a proper signal
 	match get_tree().get_nodes_in_group('turrets').size():
 		0:
-			mob_timer.wait_time = 15
+			mob_timer.wait_time = 10000
 		2:
 			mob_timer.wait_time = 6
 		4:
