@@ -11,11 +11,11 @@ func _process(delta):
 	#Fixme: if it starts getting heavy on memory or we want to keep developing the game move this to a proper signal
 	match get_tree().get_nodes_in_group('turrets').size():
 		0:
-			mob_timer.wait_time = 20
+			mob_timer.wait_time = 10
 		2:
-			mob_timer.wait_time = 6
+			mob_timer.wait_time = 3
 		4:
-			mob_timer.wait_time = 4
+			mob_timer.wait_time = 2
 		6:
 			mob_timer.wait_time = 2
 		8:

@@ -9,7 +9,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 65.0
 
-[node name="Planet" type="KinematicBody2D"]
+[node name="Planet" type="KinematicBody2D" groups=[
+"camera_shaker",
+]]
 position = Vector2( 0.115982, 0 )
 collision_mask = 0
 script = ExtResource( 1 )

@@ -20,16 +20,20 @@ pause_mode = 2
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -20.0
+margin_top = -25.0
 script = ExtResource( 1 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 320.0
 margin_bottom = 25.0
+custom_constants/separation = 7
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="BasicTurretButton" type="Button" parent="HBoxContainer"]
 pause_mode = 2
-margin_right = 101.0
+margin_right = 98.0
 margin_bottom = 25.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
@@ -38,7 +42,7 @@ icon = ExtResource( 3 )
 
 [node name="LaserTurretButton" type="Button" parent="HBoxContainer"]
 margin_left = 105.0
-margin_right = 206.0
+margin_right = 203.0
 margin_bottom = 25.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )

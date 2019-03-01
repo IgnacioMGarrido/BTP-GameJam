@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/ResourceManagement/minion.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Structures/Minion1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Structures/Minion2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Structures/MineralMinion.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Structures/Minion2.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 1.95816
@@ -21,7 +22,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 2 ) ]
 }
 
 [node name="Minion" type="KinematicBody2D" groups=[
@@ -36,10 +37,8 @@ self_modulate = Color( 0.52549, 0.2, 0.823529, 1 )
 texture = ExtResource( 2 )
 
 [node name="mineral_sprite" type="Sprite" parent="Sprite"]
-self_modulate = Color( 0.882353, 0.643137, 0.184314, 1 )
-position = Vector2( 0.416546, -1.53294 )
-scale = Vector2( 0.499688, 0.499688 )
-texture = ExtResource( 2 )
+position = Vector2( 0.5, -1.5 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
