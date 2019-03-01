@@ -11,6 +11,7 @@
 [node name="QuadLaserTurret" index="0" instance=ExtResource( 1 )]
 position = Vector2( 0, -2.5 )
 script = ExtResource( 2 )
+turret_cost = 2000
 
 [node name="TurretPivot" parent="." index="0"]
 position = Vector2( 1, -19.5 )
@@ -26,6 +27,7 @@ position = Vector2( 0, -4.5 )
 color = Color( 0.321569, 0, 0.890196, 1 )
 
 [node name="TurretPivot2" type="Position2D" parent="." index="1"]
+editor/display_folded = true
 position = Vector2( 1.00001, -6.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot2" index="0"]
@@ -59,6 +61,7 @@ enabled = true
 cast_to = Vector2( 0, 195 )
 
 [node name="TurretPivot3" type="Position2D" parent="." index="2"]
+editor/display_folded = true
 position = Vector2( 1.00002, 6.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot3" index="0"]
@@ -92,6 +95,7 @@ enabled = true
 cast_to = Vector2( 0, 195 )
 
 [node name="TurretPivot4" type="Position2D" parent="." index="3"]
+editor/display_folded = true
 position = Vector2( 1.00004, 19.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot4" index="0"]
