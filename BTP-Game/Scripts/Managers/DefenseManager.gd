@@ -50,3 +50,8 @@ func _on_TurretCreationUI_basicTurretSelected():
 func _on_TurretCreationUI_laserTurretSelected():
 	Turret = load(Global.laser_turret_res)
 
+
+
+func _on_TurretCreationUI_quadLaserSelected():
+	#Turret = load(Global.laser_turret_res) 
+	Turret = load(Global.quad_laser_turret_res)

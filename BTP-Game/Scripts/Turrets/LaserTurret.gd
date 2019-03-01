@@ -1,5 +1,7 @@
 extends Turret
 
+class_name LaserTurret
+
 onready var laser_light = $"TurretPivot/Sprite/ProjectileSpawn/Laser"
 onready var laser_sprite = $"TurretPivot/Sprite/ProjectileSpawn/Laser/Sprite"
 onready var laser_rc : RayCast2D = $"TurretPivot/Sprite/ProjectileSpawn/Laser/RayCast2D"
@@ -23,6 +25,7 @@ func update_motion(delta):
 
 func shoot_projectile():
 	pass
+
 
 
 func _on_WaitTimer_timeout():

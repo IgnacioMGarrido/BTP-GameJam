@@ -37,3 +37,4 @@ current = true
 
 [connection signal="basicTurretSelected" from="CanvasLayer/TurretCreationUI" to="DefenseManager" method="_on_TurretCreationUI_basicTurretSelected"]
 [connection signal="laserTurretSelected" from="CanvasLayer/TurretCreationUI" to="DefenseManager" method="_on_TurretCreationUI_laserTurretSelected"]
+[connection signal="quadLaserSelected" from="CanvasLayer/TurretCreationUI" to="DefenseManager" method="_on_TurretCreationUI_quadLaserSelected"]

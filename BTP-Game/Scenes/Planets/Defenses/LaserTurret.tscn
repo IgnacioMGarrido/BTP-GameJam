@@ -21,8 +21,44 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0, -70.0, 0.0, 70.0, 0.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("TurretPivot2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 70.0, 0.0, -70.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TurretPivot3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -70.0, 0.0, 70.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TurretPivot4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 70.0, 0.0, -70.0, 0.0 ]
+}
 
-[node name="LaserTurret" instance=ExtResource( 1 )]
+[node name="LaserTurret" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 Bullet = null
 
