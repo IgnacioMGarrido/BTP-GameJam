@@ -11,10 +11,12 @@ onready var laser_timer = $"LaserTimer"
 
 func _ready():
 	self.pause_mode = Node.PAUSE_MODE_STOP
-	$AnimationPlayer.play("rotate_barrel")
+	$AnimationPlayerBarrel.play("rotate_barrel")
 	_enable_objects(false)
 	wait_timer.start()
-	
+
+
+
 func _physics_process(delta):
 	if laser_rc.is_colliding():
 		if laser_rc.get_collider().has_method("on_hit"):

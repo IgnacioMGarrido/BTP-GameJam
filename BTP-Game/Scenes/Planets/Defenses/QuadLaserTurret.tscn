@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/QuadLaserTurret.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Defenses/QuadLaserTurret/QuadLaserTurretBarrel.png" type="Texture" id=2]
@@ -63,6 +63,35 @@ tracks/3/keys = {
 "values": [ 0.0, 70.0, 0.0, -70.0, 0.0 ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "hit"
+length = 0.21
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -2 ), Vector2( 0, 2 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.878431, 0.0980392, 0.0980392, 1 ), Color( 0.878431, 0.0980392, 0.0980392, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="QuadLaserTurret" type="StaticBody2D" groups=[
 "turrets",
 ]]
@@ -110,6 +139,7 @@ enabled = true
 cast_to = Vector2( 0, 195 )
 
 [node name="TurretPivot2" type="Position2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1.00001, -6.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot2"]
@@ -146,6 +176,7 @@ enabled = true
 cast_to = Vector2( 0, 195 )
 
 [node name="TurretPivot3" type="Position2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1, 6.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot3"]
@@ -182,6 +213,7 @@ enabled = true
 cast_to = Vector2( 0, 195 )
 
 [node name="TurretPivot4" type="Position2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1, 19.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot4"]
@@ -219,10 +251,8 @@ cast_to = Vector2( 0, 195 )
 
 [node name="Sprite" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 90.4184, 109.311 )
 rotation = 1.5708
 texture = ExtResource( 5 )
-offset = Vector2( -109.311, 90.4188 )
 
 [node name="Light2D" type="Light2D" parent="Sprite"]
 position = Vector2( 0, -0.5 )
@@ -240,10 +270,14 @@ wait_time = 10.0
 wait_time = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayerBarrel" type="AnimationPlayer" parent="."]
 anims/rotate_barrel = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hit = SubResource( 3 )
 
 [connection signal="timeout" from="WaitTimer" to="." method="_on_WaitTimer_timeout"]
 [connection signal="timeout" from="LaserTimer" to="." method="_on_LaserTimer_timeout"]

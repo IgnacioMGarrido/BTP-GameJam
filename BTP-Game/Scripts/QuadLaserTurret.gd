@@ -30,7 +30,7 @@ func shoot_projectile():
 
 func _ready():
 	self.pause_mode = Node.PAUSE_MODE_STOP
-	$AnimationPlayer.play("rotate_barrel")
+	$AnimationPlayerBarrel.play("rotate_barrel")
 
 	laser_components.push_back(laser_light)
 	laser_components.push_back(laser_light_2)

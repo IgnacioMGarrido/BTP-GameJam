@@ -53,6 +53,7 @@ func shoot_projectile():
 	get_node("/root/MainScene").add_child(b)
 
 func on_hit():
+	$AnimationPlayer.play("hit")
 	hit_points -= 1
 	if hit_points <= 0:
 		kill()
