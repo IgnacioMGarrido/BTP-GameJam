@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TurretBase.png-9b4421c119d2b5eeaf189ff03bb2e8f1.stex"
+path="res://.import/TurretLightText.png-e951e168b66614279cb472c4bcce6781.stex"
 
 [deps]
 
-source_file="res://Sprites/TurretBase.png"
-dest_files=[ "res://.import/TurretBase.png-9b4421c119d2b5eeaf189ff03bb2e8f1.stex" ]
+source_file="res://Sprites/Defenses/Turret/TurretLightText.png"
+dest_files=[ "res://.import/TurretLightText.png-e951e168b66614279cb472c4bcce6781.stex" ]
 
 [params]
 

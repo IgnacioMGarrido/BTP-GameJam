@@ -9,6 +9,13 @@
 
 [node name="MainScene" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -207.0
+margin_top = -131.0
+margin_right = 513.0
+margin_bottom = 320.0
+color = Color( 0, 0, 0, 1 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 1 )]

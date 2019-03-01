@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TurretBarrel.png-f2c8bc875225e12b34c51b5c55485237.stex"
+path="res://.import/QuadLaserTurretBarrel.png-06ff6d3f3cc4c01bc532c81c914cb6be.stex"
 
 [deps]
 
-source_file="res://Sprites/TurretBarrel.png"
-dest_files=[ "res://.import/TurretBarrel.png-f2c8bc875225e12b34c51b5c55485237.stex" ]
+source_file="res://Sprites/Defenses/QuadLaserTurret/QuadLaserTurretBarrel.png"
+dest_files=[ "res://.import/QuadLaserTurretBarrel.png-06ff6d3f3cc4c01bc532c81c914cb6be.stex" ]
 
 [params]
 
