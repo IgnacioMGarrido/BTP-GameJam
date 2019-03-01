@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Managers/Upgrades_UI.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/GUI/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 2 )
 
 [node name="Upgrades_UI" type="Control"]
 anchor_right = 1.0
@@ -13,12 +18,14 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -21.0
+margin_left = -28.0
 margin_top = -10.0
 margin_bottom = 10.0
 
 [node name="BulletUpgradeButton" type="Button" parent="VBoxContainer"]
-margin_right = 21.0
-margin_bottom = 20.0
+margin_right = 28.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "+1"
 
 [connection signal="pressed" from="VBoxContainer/BulletUpgradeButton" to="." method="_on_BulletUpgradeButton_pressed"]
