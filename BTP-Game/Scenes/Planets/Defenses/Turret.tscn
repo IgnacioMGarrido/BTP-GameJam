@@ -7,7 +7,7 @@
 [ext_resource path="res://Sprites/Defenses/Turret/TurretLightText.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2, 25.0383 )
+extents = Vector2( 2, 4.70647 )
 
 [node name="Turret" type="StaticBody2D" groups=[
 "turrets",

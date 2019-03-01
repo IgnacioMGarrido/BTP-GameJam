@@ -3,8 +3,8 @@ extends Turret
 
 onready var laser_light : Light2D = $"TurretPivot/Sprite/ProjectileSpawn/Laser"
 onready var laser_light_2 : Light2D = $"TurretPivot2/Sprite/ProjectileSpawn/Laser"
-onready var laser_light_3 : Light2D = $"TurretPivot2/Sprite/ProjectileSpawn/Laser"
-onready var laser_light_4 : Light2D = $"TurretPivot2/Sprite/ProjectileSpawn/Laser"
+onready var laser_light_3 : Light2D = $"TurretPivot3/Sprite/ProjectileSpawn/Laser"
+onready var laser_light_4 : Light2D = $"TurretPivot4/Sprite/ProjectileSpawn/Laser"
 
 onready var laser_rc : RayCast2D = $"TurretPivot/Sprite/ProjectileSpawn/Laser/RayCast2D"
 onready var laser_rc_2 : RayCast2D = $"TurretPivot2/Sprite/ProjectileSpawn/Laser/RayCast2D"
@@ -15,6 +15,7 @@ onready var laser_sprite : Sprite = $"TurretPivot/Sprite/ProjectileSpawn/Laser/S
 onready var laser_sprite_2 : Sprite = $"TurretPivot2/Sprite/ProjectileSpawn/Laser/Sprite"
 onready var laser_sprite_3 : Sprite = $"TurretPivot3/Sprite/ProjectileSpawn/Laser/Sprite"
 onready var laser_sprite_4 : Sprite = $"TurretPivot4/Sprite/ProjectileSpawn/Laser/Sprite"
+
 
 var laser_components = []
 
