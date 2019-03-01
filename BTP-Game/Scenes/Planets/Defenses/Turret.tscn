@@ -22,7 +22,7 @@ Bullet = ExtResource( 2 )
 position = Vector2( 3, 0 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot"]
-position = Vector2( 1.5, 9.53674e-007 )
+position = Vector2( 1.5, 9.53674e-07 )
 rotation = 1.5708
 texture = ExtResource( 3 )
 
