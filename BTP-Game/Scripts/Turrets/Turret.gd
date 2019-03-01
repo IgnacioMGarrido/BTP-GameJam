@@ -16,6 +16,7 @@ onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectileSpawn
 
 
 func _ready():
+	
 	add_to_group('turrets')
 	if Bullet == null:
 		print("No bullet assigned. Assinging the basic one")
@@ -43,7 +44,11 @@ func update_motion(delta):
 
 
 func shoot_projectile():
-	var b = Bullet.instance()	
+	if Global.basic_turret_upgraded == true:
+		Bullet = load(Global.explosive_bullet_res)
+	
+	var b = Bullet.instance()
+
 	b.start(bullet_spawn.global_position, bullet_spawn.global_rotation)
 	get_node("/root/MainScene").add_child(b)
 

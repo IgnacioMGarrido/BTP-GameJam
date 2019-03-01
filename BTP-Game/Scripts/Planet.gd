@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 signal hit_points_updated
+signal game_over_signal
 
 export var max_damage_points_to_kill_minion = 8
 
@@ -12,7 +13,10 @@ func _ready():
 
 func on_hit():
 	hit_points -= 5
-	print(damage_to_kill_minion)
+	
+	if hit_points <= 0:
+		emit_signal('game_over_signal')
+	
 	emit_signal('hit_points_updated', hit_points)
 	
 	if get_tree().get_nodes_in_group('minions').size() > 0:
