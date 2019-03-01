@@ -17,8 +17,10 @@ func _ready():
 func _process(delta):
 	if active_defense:
 		for defense_child in active_defense.get_children():
-			if "Turret" in defense_child.get_name() && get_tree().paused == false:
-				defense_child.update_motion(delta)
+			print(defense_child.get_name())
+			if "Spot" in defense_child.get_name() && get_tree().paused == false:
+				if defense_child.get_child_count() != 0:
+					defense_child.get_children()[0].update_motion(delta)
 
 
 func _on_triggered_defense(defense_spot):
