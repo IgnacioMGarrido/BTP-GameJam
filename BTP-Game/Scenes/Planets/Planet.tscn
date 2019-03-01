@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Planet.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/MainPlanet.png" type="Texture" id=2]
@@ -8,6 +8,35 @@
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 65.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "hit"
+length = 0.21
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -2, 0 ), Vector2( 2, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.909804, 0.603922, 0.603922, 1 ), Color( 0.909804, 0.603922, 0.603922, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Planet" type="KinematicBody2D" groups=[
 "camera_shaker",
@@ -23,6 +52,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="DefenseSpots" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="DefenseSpot1" parent="DefenseSpots" instance=ExtResource( 4 )]
@@ -60,4 +90,7 @@ position = Vector2( -49.5, -49.5 )
 rotation = 5.49779
 
 [node name="ResourceManagement" parent="." instance=ExtResource( 5 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hit = SubResource( 2 )
 

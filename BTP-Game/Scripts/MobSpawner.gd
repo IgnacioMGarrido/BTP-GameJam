@@ -4,7 +4,6 @@ export (PackedScene) var Mob
 onready var mob_timer : Timer = $"MobTimer"
 
 func _ready():
-	mob_timer.wait_time = 20
 	randomize()
 
 func _process(delta):
@@ -13,7 +12,7 @@ func _process(delta):
 		0:
 			mob_timer.wait_time = 10
 		2:
-			mob_timer.wait_time = 3
+			mob_timer.wait_time = 4
 		4:
 			mob_timer.wait_time = 2
 		6:
@@ -29,13 +28,13 @@ func _process(delta):
 		16:
 			mob_timer.wait_time = .3
 		18:
-			mob_timer.wait_time = .1
+			mob_timer.wait_time = .3
 		20:
-			mob_timer.wait_time = .1
+			mob_timer.wait_time = .2
 		22:
-			mob_timer.wait_time = .1
+			mob_timer.wait_time = .2
 		24:
-			mob_timer.wait_time = .1
+			mob_timer.wait_time = .2
 
 	
 func _on_MobTimer_timeout():

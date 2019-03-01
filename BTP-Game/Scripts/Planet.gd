@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 signal hit_points_updated
 signal game_over_signal
-signal camera_shake_requested
+
 
 export var max_damage_points_to_kill_minion = 8
 
@@ -13,7 +13,7 @@ func _ready():
 	emit_signal('hit_points_updated', hit_points)
 
 func on_hit():
-	emit_signal("camera_shake_requested")
+	$AnimationPlayer.play("hit")
 	hit_points -= 5
 	
 	if hit_points <= 0:
