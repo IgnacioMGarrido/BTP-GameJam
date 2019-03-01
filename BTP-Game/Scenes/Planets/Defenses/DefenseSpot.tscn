@@ -19,4 +19,12 @@ texture = ExtResource( 2 )
 [node name="TriggerArea" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
+[node name="Spot1" type="Position2D" parent="."]
+position = Vector2( -17, 0 )
+
+[node name="Spot2" type="Position2D" parent="."]
+
+[node name="Spot3" type="Position2D" parent="."]
+position = Vector2( 17, 0 )
+
 [connection signal="input_event" from="." to="." method="_on_input_event"]

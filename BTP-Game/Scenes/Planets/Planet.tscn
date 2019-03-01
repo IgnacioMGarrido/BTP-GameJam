@@ -32,47 +32,50 @@ position = Vector2( 0, -70.5 )
 [node name="QuadLaserTurret" parent="DefenseSpots/DefenseSpot1" instance=ExtResource( 5 )]
 
 [node name="DefenseSpot2" parent="DefenseSpots" instance=ExtResource( 4 )]
+editor/display_folded = true
 position = Vector2( 49.5, -49.5 )
 rotation = 0.785398
 
-[node name="Turret" parent="DefenseSpots/DefenseSpot2" instance=ExtResource( 6 )]
-rotation = -1.5708
-
 [node name="DefenseSpot3" parent="DefenseSpots" instance=ExtResource( 4 )]
+editor/display_folded = true
 position = Vector2( 70.5, 0 )
 rotation = 1.5708
 
-[node name="LaserTurret" parent="DefenseSpots/DefenseSpot3" instance=ExtResource( 7 )]
+[node name="Turret" parent="DefenseSpots/DefenseSpot3/Spot3" index="0" instance=ExtResource( 6 )]
 
 [node name="DefenseSpot4" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 49.5, 49.5 )
 rotation = 2.35619
 
-[node name="LaserTurret" parent="DefenseSpots/DefenseSpot4" instance=ExtResource( 7 )]
-
 [node name="DefenseSpot5" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 0, 70.5 )
 rotation = 3.14159
 
-[node name="Turret" parent="DefenseSpots/DefenseSpot5" instance=ExtResource( 6 )]
-rotation = -1.5708
-
 [node name="DefenseSpot6" parent="DefenseSpots" instance=ExtResource( 4 )]
+editor/display_folded = true
 position = Vector2( -49.5, 49.5 )
 rotation = 3.92699
 
-[node name="LaserTurret" parent="DefenseSpots/DefenseSpot6" instance=ExtResource( 7 )]
+[node name="LaserTurret" parent="DefenseSpots/DefenseSpot6/Spot1" index="0" instance=ExtResource( 7 )]
+
+[node name="LaserTurret" parent="DefenseSpots/DefenseSpot6/Spot3" index="0" instance=ExtResource( 7 )]
 
 [node name="DefenseSpot7" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( -70.5, 0 )
 rotation = 4.71239
 
-[node name="Turret" parent="DefenseSpots/DefenseSpot7" instance=ExtResource( 6 )]
-rotation = -1.5708
-
 [node name="DefenseSpot8" parent="DefenseSpots" instance=ExtResource( 4 )]
+editor/display_folded = true
 position = Vector2( -49.5, -49.5 )
 rotation = 5.49779
 
+[node name="Turret" parent="DefenseSpots/DefenseSpot8/Spot1" index="0" instance=ExtResource( 6 )]
+
 [node name="ResourceManagement" parent="." instance=ExtResource( 8 )]
 
+
+[editable path="DefenseSpots/DefenseSpot3"]
+
+[editable path="DefenseSpots/DefenseSpot6"]
+
+[editable path="DefenseSpots/DefenseSpot8"]

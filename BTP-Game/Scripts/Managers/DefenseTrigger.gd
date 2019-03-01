@@ -19,4 +19,4 @@ func _on_input_event(viewport, event, shape_idx):
 		if event.button_index == 1:
 			emit_signal("triggered_defense", self)
 		elif event.button_index == 2:
-			emit_signal("built_defense", self)
+			emit_signal("built_defense", self, event)
