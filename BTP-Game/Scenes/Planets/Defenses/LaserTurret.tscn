@@ -22,8 +22,10 @@ tracks/0/keys = {
 "values": [ 0.0, -70.0, 0.0, 70.0, 0.0 ]
 }
 
-[node name="LaserTurret" instance=ExtResource( 1 )]
+[node name="LaserTurret" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+hit_points = 4
+turret_cost = 300
 Bullet = null
 
 [node name="Laser" type="Light2D" parent="TurretPivot/Sprite/ProjectileSpawn" index="0"]

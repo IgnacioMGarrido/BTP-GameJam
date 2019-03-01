@@ -70,6 +70,7 @@ position = Vector2( 0, -2.5 )
 rotation = 4.71239
 collision_layer = 8
 script = ExtResource( 1 )
+turret_cost = 1000
 
 [node name="TurretPivot" type="Position2D" parent="."]
 editor/display_folded = true
