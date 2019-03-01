@@ -23,6 +23,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="DefenseSpots" type="Node2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="DefenseSpot1" parent="DefenseSpots" instance=ExtResource( 4 )]
@@ -40,12 +41,16 @@ position = Vector2( 70.5, 0 )
 rotation = 1.5708
 
 [node name="LaserTurret" parent="DefenseSpots/DefenseSpot3" instance=ExtResource( 6 )]
+collision_layer = 1
+collision_mask = 0
 
 [node name="DefenseSpot4" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 49.5, 49.5 )
 rotation = 2.35619
 
 [node name="LaserTurret" parent="DefenseSpots/DefenseSpot4" instance=ExtResource( 6 )]
+collision_layer = 1
+collision_mask = 0
 
 [node name="DefenseSpot5" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( 0, 70.5 )
@@ -59,6 +64,8 @@ position = Vector2( -49.5, 49.5 )
 rotation = 3.92699
 
 [node name="LaserTurret" parent="DefenseSpots/DefenseSpot6" instance=ExtResource( 6 )]
+collision_layer = 1
+collision_mask = 0
 
 [node name="DefenseSpot7" parent="DefenseSpots" instance=ExtResource( 4 )]
 position = Vector2( -70.5, 0 )
