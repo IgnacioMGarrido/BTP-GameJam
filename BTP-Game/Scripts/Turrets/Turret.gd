@@ -16,6 +16,7 @@ onready var bullet_spawn : Position2D = $TurretPivot/Sprite/ProjectileSpawn
 
 
 func _ready():
+	add_to_group('turrets')
 	if Bullet == null:
 		print("No bullet assigned. Assinging the basic one")
 		Bullet = load(Global.bullet_res)

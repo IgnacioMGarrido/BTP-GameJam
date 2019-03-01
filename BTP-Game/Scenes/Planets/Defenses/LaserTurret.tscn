@@ -22,19 +22,24 @@ tracks/0/keys = {
 "values": [ 0.0, -70.0, 0.0, 70.0, 0.0 ]
 }
 
-[node name="LaserTurret" instance=ExtResource( 1 )]
+[node name="LaserTurret" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 Bullet = null
 
 [node name="Laser" type="Light2D" parent="TurretPivot/Sprite/ProjectileSpawn" index="0"]
-position = Vector2( 98, 0 )
+position = Vector2( 59.0836, 0.191681 )
+scale = Vector2( 0.60531, 0.560368 )
 texture = ExtResource( 3 )
 texture_scale = 3.4
 color = Color( 1, 0, 0, 1 )
 energy = 100.0
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="0"]
-position = Vector2( 8.4411, -0.000190735 )
+modulate = Color( 1, 1, 1, 0.0235294 )
+position = Vector2( 2.3354, -0.000171661 )
 rotation = -2.27374e-13
 scale = Vector2( 0.874726, 0.302382 )
 texture = ExtResource( 4 )

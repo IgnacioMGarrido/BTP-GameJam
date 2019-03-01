@@ -31,13 +31,14 @@ func _on_built_defense(defense_spot):
 	if res_manager.current_minerals >= t.turret_cost:
 		emit_signal("turret_bought", t.turret_cost)
 		var child_count = defense_spot.get_child_count()
+		print('childs: ' + str(child_count))
 		if child_count < 5:
 			match child_count:
+
 				3:
 					t.position.x += 17
 				4:
 					t.position.x -= 17
-			
 			defense_spot.add_child(t)
 		else:
 			t.queue_free()
