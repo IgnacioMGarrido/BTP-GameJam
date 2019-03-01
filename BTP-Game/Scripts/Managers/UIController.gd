@@ -11,15 +11,15 @@ onready var life_progress_bar = $"HBoxContainer/HPContainer/TextureProgress"
 onready var tween : Tween = $"Tween"
 
 func _ready():
-	minerals_label.text = "0"
+	minerals_label.text = "20"
 	res_manager.connect("minerals_updated",self,"_on_minerals_updated")
-	
-func _on_minerals_updated(var new_minerals):
-	minerals_label.text = str(new_minerals)
 	
 func _input(event):
 	if event.is_action_pressed("pause"):
 		get_tree().paused = not get_tree().paused
+
+func _on_minerals_updated(var new_minerals):
+	minerals_label.text = str(new_minerals)
 
 func _on_Planet_hit_points_updated(var hit_points):
 	hp_label.text = str(hit_points)
