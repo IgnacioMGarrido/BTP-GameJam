@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scenes/Planets/Defenses/Turret.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Planets/Defenses/LaserTurret.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Defenses/QuadLaserTurret/QuadLaserTurretBarrel.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Defenses/QuadLaserTurret/QuadLaserTurretBase.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Defenses/QuadLaserTurret/QuadLaserTurretLightText.png" type="Texture" id=4]
@@ -12,49 +12,50 @@ position = Vector2( 0, -2.5 )
 position = Vector2( 1, -19.5 )
 
 [node name="Sprite" parent="TurretPivot" index="0"]
-position = Vector2( 2.5, 0 )
+position = Vector2( 1, 0 )
 texture = ExtResource( 2 )
 
 [node name="ProjectileSpawn" parent="TurretPivot/Sprite" index="0"]
-position = Vector2( -5.72205e-006, -3.5 )
+position = Vector2( 0, -4.5 )
 
 [node name="TurretPivot2" type="Position2D" parent="." index="1"]
 position = Vector2( 1.00001, -6.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot2" index="0"]
-position = Vector2( 2.5, 0 )
+position = Vector2( 1, 0 )
 rotation = 1.5708
 texture = ExtResource( 2 )
 
 [node name="ProjectileSpawn" type="Position2D" parent="TurretPivot2/Sprite" index="0"]
-position = Vector2( -3.8147e-006, -3.5 )
+position = Vector2( 0, -4.5 )
 rotation = -1.5708
 
 [node name="TurretPivot3" type="Position2D" parent="." index="2"]
 position = Vector2( 1.00002, 6.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot3" index="0"]
-position = Vector2( 2.5, 0 )
+position = Vector2( 1, 0 )
 rotation = 1.5708
 texture = ExtResource( 2 )
 
 [node name="ProjectileSpawn" type="Position2D" parent="TurretPivot3/Sprite" index="0"]
-position = Vector2( -4.29153e-006, -3.5 )
+position = Vector2( 0, -4.5 )
 rotation = -1.5708
 
 [node name="TurretPivot4" type="Position2D" parent="." index="3"]
 position = Vector2( 1.00004, 19.5 )
 
 [node name="Sprite" type="Sprite" parent="TurretPivot4" index="0"]
-position = Vector2( 2.5, 0 )
+position = Vector2( 1, 0 )
 rotation = 1.5708
 texture = ExtResource( 2 )
 
 [node name="ProjectileSpawn" type="Position2D" parent="TurretPivot4/Sprite" index="0"]
-position = Vector2( -5.72205e-006, -3.5 )
+position = Vector2( 0, -4.5 )
 rotation = -1.5708
 
 [node name="Sprite" parent="." index="4"]
+modulate = Color( 1, 1, 1, 1 )
 texture = ExtResource( 3 )
 
 [node name="Light2D" parent="Sprite" index="0"]
