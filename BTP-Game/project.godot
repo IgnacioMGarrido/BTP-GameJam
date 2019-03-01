@@ -52,7 +52,7 @@ _global_script_class_icons={
 
 config/name="BTP-Game"
 run/main_scene="res://Scenes/MainScene.tscn"
-config/icon="res://icon.png"
+config/icon="res://Sprites/MainPlanet.png"
 
 [autoload]
 

@@ -1,50 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Managers/ResourceManager.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/ResourceManagement/HeadQuarter.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://Scenes/minions/minion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Structures/Mine.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/ResourceManagement/HeadQuarter.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Structures/Headquarters.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/minions/minion.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.39634, 3.75113 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.27736, 3.36559 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 4.07492, 3.75113 )
-
 [node name="ResourceManagement" type="Node2D"]
 pause_mode = 2
 script = ExtResource( 1 )
-
-[node name="HeadQuarter" type="Area2D" parent="."]
-pause_mode = 1
-editor/display_folded = true
-position = Vector2( 9.27523, -3.09174 )
-collision_layer = 2
-collision_mask = 2
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="HQSprite" type="Sprite" parent="HeadQuarter"]
-self_modulate = Color( 0.12549, 0.682353, 0.811765, 1 )
-scale = Vector2( 0.122993, 0.122993 )
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadQuarter"]
-shape = SubResource( 1 )
-
-[node name="HQMinions" type="Node2D" parent="HeadQuarter"]
-editor/display_folded = true
-
-[node name="Minion" parent="HeadQuarter/HQMinions" instance=ExtResource( 4 )]
-position = Vector2( 3.05132, -8.70523 )
-
-[node name="Minion2" parent="HeadQuarter/HQMinions" instance=ExtResource( 4 )]
-position = Vector2( 9.96165, -0.0897443 )
-
-[node name="Minion3" parent="HeadQuarter/HQMinions" instance=ExtResource( 4 )]
-position = Vector2( 4.03851, 9.06421 )
 
 [node name="Mine" type="Area2D" parent="."]
 pause_mode = 1
@@ -58,10 +28,38 @@ __meta__ = {
 
 [node name="MineSprite" type="Sprite" parent="Mine"]
 self_modulate = Color( 0.737255, 0.380392, 0.0627451, 1 )
-scale = Vector2( 0.139, 0.139 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mine"]
+position = Vector2( 2.82025, 0 )
 shape = SubResource( 2 )
+
+[node name="HeadQuarter" type="Area2D" parent="."]
+pause_mode = 1
+editor/display_folded = true
+position = Vector2( 9.27523, -3.09174 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="HQSprite" type="Sprite" parent="HeadQuarter"]
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadQuarter"]
+shape = SubResource( 1 )
+
+[node name="HQMinions" type="Node2D" parent="HeadQuarter"]
+
+[node name="Minion" parent="HeadQuarter/HQMinions" instance=ExtResource( 5 )]
+position = Vector2( 3.05132, -8.70523 )
+
+[node name="Minion2" parent="HeadQuarter/HQMinions" instance=ExtResource( 5 )]
+position = Vector2( 9.96165, -0.0897443 )
+
+[node name="Minion3" parent="HeadQuarter/HQMinions" instance=ExtResource( 5 )]
+position = Vector2( 4.03851, 9.06421 )
 
 [connection signal="input_event" from="HeadQuarter" to="HeadQuarter" method="_on_HeadQuarter_input_event"]
