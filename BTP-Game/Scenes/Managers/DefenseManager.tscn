@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Managers/DefenseManager.gd" type="Script" id=1]
+[ext_resource path="res://sfx/spawn_turret_sfx.wav" type="AudioStream" id=2]
 
 [node name="DefenseManager" type="Node2D"]
 pause_mode = 2
 script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 
