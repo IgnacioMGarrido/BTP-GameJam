@@ -8,7 +8,6 @@
 
 [node name="LaserTurret" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-hit_points = 4
 turret_cost = 200
 Bullet = null
 
