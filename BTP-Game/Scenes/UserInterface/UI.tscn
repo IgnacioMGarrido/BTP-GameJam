@@ -3,8 +3,8 @@
 [ext_resource path="res://Scripts/Managers/UIController.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/GUI/Placeholders/label_HP_bg.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/GUI/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Sprites/GUI/Placeholders/lifebar_bg.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/GUI/Placeholders/lifebar_fill.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/GUI/HPBar.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/HPFill.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Structures/MineralIcon.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
@@ -37,15 +37,14 @@ margin_right = 318.0
 margin_bottom = 18.0
 
 [node name="HPContainer" type="HBoxContainer" parent="HBoxContainer"]
-editor/display_folded = true
 margin_right = 285.0
 margin_bottom = 16.0
 size_flags_horizontal = 3
 
 [node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer/HPContainer"]
-margin_right = 20.0
+margin_right = 26.0
 margin_bottom = 16.0
-rect_min_size = Vector2( 20, 0 )
+rect_min_size = Vector2( 26, 0 )
 texture = ExtResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/HPContainer/NinePatchRect"]
@@ -58,18 +57,17 @@ custom_constants/margin_left = 1
 [node name="HPValue" type="Label" parent="HBoxContainer/HPContainer/NinePatchRect/MarginContainer"]
 margin_left = 1.0
 margin_top = 2.0
-margin_right = 19.0
+margin_right = 25.0
 margin_bottom = 16.0
 size_flags_vertical = 5
 custom_fonts/font = SubResource( 1 )
-text = "10"
+text = "100"
 valign = 1
 
 [node name="HP" type="Label" parent="HBoxContainer/HPContainer/NinePatchRect/MarginContainer"]
-visible = false
 margin_left = 1.0
 margin_top = 2.0
-margin_right = 19.0
+margin_right = 25.0
 margin_bottom = 16.0
 size_flags_vertical = 5
 custom_fonts/font = SubResource( 2 )
@@ -78,10 +76,10 @@ align = 2
 valign = 1
 
 [node name="TextureProgress" type="TextureProgress" parent="HBoxContainer/HPContainer"]
-margin_left = 24.0
-margin_right = 124.0
+margin_left = 30.0
+margin_right = 94.0
 margin_bottom = 16.0
-rect_min_size = Vector2( 100, 0 )
+rect_min_size = Vector2( 64, 0 )
 value = 50.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 5 )
