@@ -9,6 +9,10 @@ var direction : Vector2
 var velocity : Vector2
 var speed = 50
 
+func _ready():
+	$AnimationPlayer.playback_speed = 1.75
+	$AnimationPlayer.play("roll")
+
 
 func _physics_process(delta):
 	direction = (destination - global_position).normalized()
