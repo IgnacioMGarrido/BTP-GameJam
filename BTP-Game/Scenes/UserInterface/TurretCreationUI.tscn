@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/TurretCreationUI.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/GUI/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Sprites/Defenses/Turret/TurretBase.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Defenses/QuadLaserTurret/QuadLaserTurretBarrel.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Defenses/Turret/LaserTurretBase.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Defenses/QuadLaserTurret/QuadLaserTurretBarrel.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -51,7 +52,7 @@ margin_bottom = 25.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 2 )
-icon = ExtResource( 3 )
+icon = ExtResource( 4 )
 
 [node name="QuadLaserTurretButton" type="Button" parent="HBoxContainer"]
 margin_left = 58.0
@@ -60,7 +61,7 @@ margin_bottom = 23.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_fonts/font = SubResource( 3 )
-icon = ExtResource( 4 )
+icon = ExtResource( 5 )
 
 [connection signal="pressed" from="HBoxContainer/BasicTurretButton" to="." method="_on_BasicTurretButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/LaserTurretButton" to="." method="_on_LaserTurretButton_pressed"]
