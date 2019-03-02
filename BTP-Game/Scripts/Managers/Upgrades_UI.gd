@@ -2,7 +2,7 @@ extends Control
 
 
 
-export var basic_upgrade_cost = 2000
+export var basic_upgrade_cost = 600
 
 onready var bulletButton = $"VBoxContainer/BulletUpgradeButton"
 onready var res_manager = get_node(Global.ResourceManager_path)

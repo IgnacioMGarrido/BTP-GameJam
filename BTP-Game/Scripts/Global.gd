@@ -3,6 +3,7 @@ extends Node
 #File System Paths
 const bullet_res = "res://Scenes/Planets/Defenses/Bullet.tscn"
 const explosive_bullet_res = "res://Scenes/Planets/Defenses/ExplosiveBullet.tscn"
+const explosion_res = "res://Scenes/Explosions/explosion.tscn"
 const planet_main = "res://Scenes/MainScene.tscn"
 const minion_res = "res://Scenes/minions/minion.tscn"
 const turret_res = "res://Scenes/Planets/Defenses/Turret.tscn"

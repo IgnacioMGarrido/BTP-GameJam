@@ -5,11 +5,13 @@ class_name Mob
 
 onready var destination = get_node("/root/MainScene/Planet").global_position
 
+
 var direction : Vector2
 var velocity : Vector2
 var speed = 50
 
 func _ready():
+
 	$AnimationPlayer.playback_speed = 1.75
 	$AnimationPlayer.play("roll")
 
@@ -26,5 +28,9 @@ func _physics_process(delta):
 
 
 func on_hit():
+	var explosion = load(Global.explosion_res)
+	var e = explosion.instance()
+	e.start(global_position)
+	get_node("/root/MainScene").add_child(e)
 	queue_free()
 

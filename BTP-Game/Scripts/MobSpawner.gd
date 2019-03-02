@@ -12,29 +12,29 @@ func _process(delta):
 		0:
 			mob_timer.wait_time = 10
 		2:
-			mob_timer.wait_time = 4
+			mob_timer.wait_time = 5
 		4:
-			mob_timer.wait_time = 2
+			mob_timer.wait_time = 4
 		6:
-			mob_timer.wait_time = 2
+			mob_timer.wait_time = 3
 		8:
-			mob_timer.wait_time = .5
+			mob_timer.wait_time = 3
 		10:
-			mob_timer.wait_time = .5
+			mob_timer.wait_time = 2
 		12:
-			mob_timer.wait_time = .5
+			mob_timer.wait_time = 1
 		14:
-			mob_timer.wait_time = .3
+			mob_timer.wait_time = 1
 		16:
-			mob_timer.wait_time = .3
+			mob_timer.wait_time = .7
 		18:
-			mob_timer.wait_time = .3
+			mob_timer.wait_time = .5
 		20:
-			mob_timer.wait_time = .2
+			mob_timer.wait_time = .5
 		22:
-			mob_timer.wait_time = .2
+			mob_timer.wait_time = .4
 		24:
-			mob_timer.wait_time = .2
+			mob_timer.wait_time = .3
 
 	
 func _on_MobTimer_timeout():

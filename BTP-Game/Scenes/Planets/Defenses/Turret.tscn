@@ -33,6 +33,7 @@ position = Vector2( 0, -1.5 )
 rotation = 4.71239
 collision_layer = 8
 script = ExtResource( 1 )
+hit_points = 2
 Bullet = ExtResource( 2 )
 
 [node name="TurretPivot" type="Position2D" parent="."]
