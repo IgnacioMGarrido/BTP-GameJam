@@ -91,7 +91,13 @@ func _enable_objects(var is_enabled):
 			'Sprite':
 				comp.visible = is_enabled
 
-
+func kill():
+	var explosion = load(Global.turret_explosion_res)
+	var e = explosion.instance()
+	e.scale = Vector2(3,3)
+	e.start(global_position)
+	get_node("/root/MainScene").add_child(e)
+	queue_free()
 
 
 

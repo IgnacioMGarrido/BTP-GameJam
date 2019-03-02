@@ -59,6 +59,10 @@ func on_hit():
 		kill()
 
 func kill():
+	var explosion = load(Global.turret_explosion_res)
+	var e = explosion.instance()
+	e.start(global_position)
+	get_node("/root/MainScene").add_child(e)
 	queue_free()
 
 
