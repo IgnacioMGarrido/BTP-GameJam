@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/explosin_sfx.wav-c7aae8ead094af6a791ba0233340614d.sample"
+path="res://.import/explosion_sfx.wav-d251e074fe3e9841a2fb52c8c4e4fb34.sample"
 
 [deps]
 
-source_file="res://sfx/explosin_sfx.wav"
-dest_files=[ "res://.import/explosin_sfx.wav-c7aae8ead094af6a791ba0233340614d.sample" ]
+source_file="res://sfx/explosion_sfx.wav"
+dest_files=[ "res://.import/explosion_sfx.wav-d251e074fe3e9841a2fb52c8c4e4fb34.sample" ]
 
 [params]
 

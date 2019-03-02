@@ -48,6 +48,7 @@ func shoot_projectile():
 		Bullet = load(Global.explosive_bullet_res)
 	
 	var b = Bullet.instance()
+	$AudioStreamPlayer.play()
 
 	b.start(bullet_spawn.global_position, bullet_spawn.global_rotation)
 	get_node("/root/MainScene").add_child(b)

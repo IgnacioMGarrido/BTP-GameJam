@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Scripts/explosion.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Explosion/Explosion01.png" type="Texture" id=2]
@@ -37,6 +37,7 @@
 [ext_resource path="res://Sprites/Explosion/Explosion34.png" type="Texture" id=35]
 [ext_resource path="res://Sprites/Explosion/Explosion35.png" type="Texture" id=36]
 [ext_resource path="res://Sprites/Explosion/Explosion36.png" type="Texture" id=37]
+[ext_resource path="res://sfx/explosion_sfx.wav" type="AudioStream" id=38]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Explode"
@@ -70,5 +71,9 @@ anims/Explode = SubResource( 1 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
