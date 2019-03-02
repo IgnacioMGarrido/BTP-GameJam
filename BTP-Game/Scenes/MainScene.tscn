@@ -25,6 +25,10 @@ color = Color( 0, 0, 0, 1 )
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="TurretCreationUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_left = -158.0
+margin_top = -27.0
+margin_right = -78.0
+margin_bottom = -2.0
 
 [node name="Upgrades_UI" parent="CanvasLayer" instance=ExtResource( 4 )]
 

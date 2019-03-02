@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LaserTurretBase.png-3b77a10b96ecc03deaac8ef89021f6ad.stex"
+path="res://.import/LaserTurretBase.png-0c9d81fe34c17ae3c56d4f6e70f03f07.stex"
 
 [deps]
 
-source_file="res://Sprites/Defenses/Turret/LaserTurretBase.png"
-dest_files=[ "res://.import/LaserTurretBase.png-3b77a10b96ecc03deaac8ef89021f6ad.stex" ]
+source_file="res://Sprites/Defenses/LaserTurret/LaserTurretBase.png"
+dest_files=[ "res://.import/LaserTurretBase.png-0c9d81fe34c17ae3c56d4f6e70f03f07.stex" ]
 
 [params]
 

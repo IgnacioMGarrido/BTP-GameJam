@@ -1,20 +1,29 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Planets/Defenses/Turret.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Turrets/LaserTurret.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/DefenseStrap.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/GUI/Placeholders/energy_bar_fill.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Animations/rotate_barrel.tres" type="Animation" id=5]
+[ext_resource path="res://Sprites/Defenses/LaserTurret/LaserTurretBarrel.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/DefenseStrap.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/Placeholders/energy_bar_fill.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Defenses/LaserTurret/LaserTurretBase.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Animations/rotate_barrel.tres" type="Animation" id=7]
 
 [node name="LaserTurret" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 turret_cost = 200
 Bullet = null
 
+[node name="TurretPivot" parent="." index="0"]
+editor/display_folded = false
+position = Vector2( 2, 9.53674e-007 )
+
+[node name="Sprite" parent="TurretPivot" index="0"]
+texture = ExtResource( 3 )
+
 [node name="Laser" type="Light2D" parent="TurretPivot/Sprite/ProjectileSpawn" index="0"]
 position = Vector2( 31.3157, 0.0572472 )
 scale = Vector2( 0.313278, 0.486275 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 texture_scale = 3.4
 color = Color( 1, 0, 0, 1 )
 energy = 100.0
@@ -25,19 +34,27 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="0"]
 modulate = Color( 1, 1, 1, 0.0235294 )
 position = Vector2( 2.3354, -0.000171661 )
-rotation = -2.27374e-13
+rotation = -2.27374e-013
 scale = Vector2( 0.874726, 0.302382 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="RayCast2D" type="RayCast2D" parent="TurretPivot/Sprite/ProjectileSpawn/Laser" index="1"]
-position = Vector2( -95, 1.45519e-11 )
+position = Vector2( -95, 1.45519e-011 )
 rotation = -1.5708
 enabled = true
 cast_to = Vector2( 0, 195 )
 
 [node name="Sprite" parent="." index="1"]
-editor/display_folded = true
-modulate = Color( 1, 0.0941176, 0.0941176, 1 )
+texture = ExtResource( 6 )
+
+[node name="Light2D" parent="Sprite" index="0"]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2( -1.5, 0 )
+
+[node name="DummyPivot" parent="." index="3"]
+position = Vector2( 2, 9.53674e-007 )
 
 [node name="WaitTimer" type="Timer" parent="." index="4"]
 wait_time = 3.0
@@ -46,10 +63,10 @@ wait_time = 3.0
 wait_time = 2.0
 
 [node name="AnimationPlayer" parent="." index="6"]
-anims/rotate_barrel = ExtResource( 5 )
+anims/rotate_barrel = ExtResource( 7 )
 
 [node name="AnimationPlayerBarrel" type="AnimationPlayer" parent="." index="7"]
-anims/rotate_barrel = ExtResource( 5 )
+anims/rotate_barrel = ExtResource( 7 )
 
 [connection signal="timeout" from="WaitTimer" to="." method="_on_WaitTimer_timeout"]
 [connection signal="timeout" from="LaserTimer" to="." method="_on_LaserTimer_timeout"]
