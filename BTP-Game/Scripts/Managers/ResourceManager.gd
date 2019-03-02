@@ -4,7 +4,7 @@ signal minerals_updated
 
 class_name ResourceManager
 
-export var current_minerals = 10000
+export var current_minerals = 200
 
 	
 func _on_minion_mineral_delivered(var mineral_value):

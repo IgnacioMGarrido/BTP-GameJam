@@ -11,7 +11,7 @@ onready var life_progress_bar = $"HBoxContainer/HPContainer/TextureProgress"
 onready var tween : Tween = $"Tween"
 
 func _ready():
-	minerals_label.text = "100"
+	minerals_label.text = "200"
 	res_manager.connect("minerals_updated",self,"_on_minerals_updated")
 	
 func _input(event):
