@@ -3,12 +3,10 @@
 [ext_resource path="res://Scripts/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Defenses/Bullets/Bullet.png" type="Texture" id=2]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 3.29523
-height = 4.65788
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1, 1 )
 
 [node name="Bullet" type="KinematicBody2D"]
-scale = Vector2( 0.243801, 0.243801 )
 collision_layer = 4
 script = ExtResource( 1 )
 __meta__ = {
@@ -16,7 +14,6 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
