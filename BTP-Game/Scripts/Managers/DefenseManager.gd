@@ -38,6 +38,7 @@ func _on_built_defense(defense_spot, event):
 		
 		if Turret.get_path().ends_with("QuadLaserTurret.tscn"):
 			if taken_spots == 0 && defense_spot.get_child_count() == 5:
+				$"AudioStreamPlayer".play()
 				defense_spot.add_child(t)
 				emit_signal("turret_bought", t.turret_cost)
 			else:
@@ -45,6 +46,7 @@ func _on_built_defense(defense_spot, event):
 		else:
 			if taken_spots < 3 && defense_spot.get_child_count() == 5: #No quad laser turrets
 				var closest_spot = find_closest_spot(spot_1, spot_2, spot_3, event)
+				$"AudioStreamPlayer".play()
 				closest_spot.add_child(t)
 				emit_signal("turret_bought", t.turret_cost)
 			else:

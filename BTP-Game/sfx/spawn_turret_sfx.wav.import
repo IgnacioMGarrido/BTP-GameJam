@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spawn_turret_sfx.wav-2216e482a4ff7344b5c7a472ed5235eb.sample"
+
+[deps]
+
+source_file="res://sfx/spawn_turret_sfx.wav"
+dest_files=[ "res://.import/spawn_turret_sfx.wav-2216e482a4ff7344b5c7a472ed5235eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

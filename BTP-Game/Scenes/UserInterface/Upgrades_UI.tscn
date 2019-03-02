@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Managers/Upgrades_UI.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/GUI/font/Comfortaa-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sfx/powerup_sfx.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
@@ -26,5 +27,8 @@ margin_right = 28.0
 margin_bottom = 18.0
 custom_fonts/font = SubResource( 1 )
 text = "+1"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="pressed" from="VBoxContainer/BulletUpgradeButton" to="." method="_on_BulletUpgradeButton_pressed"]
