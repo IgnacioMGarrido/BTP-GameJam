@@ -12,7 +12,8 @@ onready var tween : Tween = $"Tween"
 
 func _ready():
 	minerals_label.text = "200"
-	res_manager.connect("minerals_updated",self,"_on_minerals_updated")
+	if res_manager != null:
+		res_manager.connect("minerals_updated",self,"_on_minerals_updated")
 	
 func _input(event):
 	if event.is_action_pressed("pause"):

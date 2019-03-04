@@ -4,7 +4,7 @@ signal create_worker
 
 onready var minion_parent = get_child(2)
 var Minion = load(Global.minion_res)
-onready var res_manager = get_node(Global.ResourceManager_path)
+onready var res_manager = $".."
 
 
 func _on_HeadQuarter_input_event(viewport, event, shape_idx):
